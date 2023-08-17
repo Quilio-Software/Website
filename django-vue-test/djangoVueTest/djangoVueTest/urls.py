@@ -14,20 +14,29 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from apps.products.views import get_products
+from apps.core.views import get_dummy_data
+from apps.core.views import vue
 from django.contrib import admin
 from django.urls import path
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 """ from apps.core.views import frontpage """
 
-from apps.core.views import vue
 
 """ path('', frontpage, name='frontpage'), """
 
-from apps.core.views import get_dummy_data 
 
 urlpatterns = [
     path('', vue, name='vue'),
     path('admin/', admin.site.urls),
 
-    path('api/dummy-data', get_dummy_data, name='get_dummy_data')
+    path('api/dummy-data', get_dummy_data, name='get_dummy_data'),
+    path('api/products', get_products, name='get_products')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
