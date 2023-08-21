@@ -14,29 +14,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from apps.products.views import get_products
-from apps.core.views import get_dummy_data
+
 from apps.core.views import vue
 from django.contrib import admin
 from django.urls import path
 
+from apps.products.views import get_products
+from apps.core.views import get_dummy_data
+from apps.emailForm.views import create_email_form
+
 from django.conf import settings
 from django.conf.urls.static import static
-
-""" from apps.core.views import frontpage """
-
-
-""" path('', frontpage, name='frontpage'), """
-
 
 urlpatterns = [
     path('', vue, name='vue'),
     path('admin/', admin.site.urls),
 
     path('api/dummy-data', get_dummy_data, name='get_dummy_data'),
-    path('api/products', get_products, name='get_products')
+    path('api/products', get_products, name='get_products'),
+    path('api/emailForm/', create_email_form, name='create_email_form'),
 ]
 
-if settings.DEBUG:
+""" To get assets folder """
+""" if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+                          document_root=settings.MEDIA_ROOT) """

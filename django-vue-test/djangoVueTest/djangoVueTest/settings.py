@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-fl=s!9khx@!62-hc0%+jmguly=%omn^7hijgtwfza0pete^lvc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'apps.core',
+    'apps.emailForm',
     'apps.products'
 ]
 
@@ -43,8 +44,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # The current origin for frontend app
+    "http://localhost:5173",  # origin for frontend
 ]
+
+CORS_ALLOWED_CREDENTIALS = True
 
 ROOT_URLCONF = 'djangoVueTest.urls'
 
