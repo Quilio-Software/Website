@@ -1,6 +1,6 @@
 <template>
-    <section class="products-section-container">
-        <div class="product-container border-2 border-black m-4" v-for="product in productList" :key="product.slug">
+    <section class="products-section-containers w-full flex bg-surface/secondary">
+        <!-- <div class="product-container border-2 border-black m-4" v-for="product in filteredProducts" :key="product.slug">
             <h3>{{ product.title }}</h3>
             <p>{{ product.description }}</p>
             <img :src="'http://localhost:8000/' + product.image" alt="...">
@@ -21,31 +21,62 @@
                     </li>
                 </ul>
             </div>
+        </div> -->
+
+        <!-- TEMPPPP -->
+        <div class="my-36 flex flex-row justify-center flex-wrap gap-20">
+            <TempProduct />
+            <TempProduct />
+            <TempProduct />
+            <TempProduct />
         </div>
+
     </section>
 </template>
-
-<script>
+  
+<script setup>
+import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
+import { defineProps } from 'vue';
 
-export default {
-    data() {
-        return {
-            productList: []
-        };
-    },
-    created() {
-        this.fetchProducts();
-    },
-    methods: {
-        async fetchProducts() {
-            try {
-                const response = await axios.get('http://localhost:8000/' + 'api/products');
-                this.productList = response.data;
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
+import TempProduct from '../components/TempProduct.vue'
+
+const props = defineProps({
+    category: String,
+});
+
+const productList = ref([]);
+
+const fetchProducts = async () => {
+    try {
+        const response = await axios.get('http://localhost:8000/api/products/' + props.category);
+        productList.value = response.data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
 };
+
+onMounted(fetchProducts);
+
+const filteredProducts = computed(() => {
+    console.log(productList.value.filter(product => product.category === props.category));
+    return productList.value.filter(product => product.category === props.category);
+});
+
+
+//Hover element
+const productContainers = document.querySelectorAll('.product-container');
+console.log(productContainers);
+productContainers.forEach((product) => {
+    const imgContainer = product.querySelector('.img-container');
+    const audioDemosContainer = product.querySelector('.audio-demos-container');
+
+    imgContainer.addEventListener('hover', () => {
+        console.log('img hovered');
+        audioDemosContainer.classList.toggle('visible');
+        audioDemosContainer.classList.toggle('invisible');
+    });
+});
+
 </script>
+  

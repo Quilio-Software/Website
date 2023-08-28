@@ -6,8 +6,8 @@ import logging
 logger = logging.getLogger(__name__)  # logger instance
 
 
-def get_products(request):
-    products = Product.objects.all()
+def get_products_by_category(request, category):
+    products = Product.objects.filter(category=category)
     data = []
 
     for product in products:

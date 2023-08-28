@@ -4,9 +4,18 @@ from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 
 
+CATEGORY_CHOICES = (
+    ('new', 'New'),
+    ('deals', 'Deals'),
+    ('free', 'Free'),
+)
+
+
 class Product(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
+    category = models.CharField(
+        max_length=10, choices=CATEGORY_CHOICES, default='new')
     description = models.TextField()
     image = models.ImageField(upload_to='img/products', null=True, blank=True)
 
@@ -15,7 +24,7 @@ class Product(models.Model):
 
 
 @receiver(pre_delete, sender=Product)
-def delete_product_files(sender, instance, **kwargs):
+def delete_product_files(instance, **kwargs):
     # Delete associated image file
     if instance.image:
         if os.path.isfile(instance.image.path):

@@ -19,8 +19,7 @@ from apps.core.views import vue
 from django.contrib import admin
 from django.urls import path
 
-from apps.products.views import get_products
-from apps.core.views import get_dummy_data
+from apps.products.views import get_products_by_category
 from apps.emailForm.views import create_email_form
 
 from django.conf import settings
@@ -30,8 +29,8 @@ urlpatterns = [
     path('', vue, name='vue'),
     path('admin/', admin.site.urls),
 
-    path('api/dummy-data', get_dummy_data, name='get_dummy_data'),
-    path('api/products', get_products, name='get_products'),
+    path('api/products/<str:category>/', get_products_by_category,
+         name='get_products_by_category'),
     path('api/emailForm/', create_email_form, name='create_email_form'),
 ]
 
