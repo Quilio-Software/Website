@@ -7,9 +7,9 @@
     <nav class="">
         <div class="nav-main h-24 flex flex-row justify-around items-center bg-gray/900">
             <!-- LOGO -->
-            <div class="logo-container w-28 h-8 bg-primary/400">
+            <div class="logo-container w-28 h-8 flex justify-center items-center">
                 <!-- Need to fill with LOGO -->
-                <h3 class="text-white">LOGO</h3><!-- TEMP -->
+                <img src="../assets/img/nav/logo/full-logo.svg" alt="Quillio logo">
             </div>
             <!-- NAV BUTTONS -->
             <ul class="nav-buttons flex flex-row justify-around gap-3 sm:gap-6 md:gap-16 ease duration-300">
