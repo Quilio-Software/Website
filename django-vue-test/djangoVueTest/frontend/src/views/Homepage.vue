@@ -15,7 +15,7 @@ import EmailForm from '../components/EmailForm.vue';
                 made by engineers, for artists</h5>
         </div>
         <img class="absolute h-full min-w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-2/4 object-cover opacity-70"
-            src="../assets/img/homepage/hero/banner/hero-section-banner.png" alt="hero section banner image">
+            src="../assets/img/banner.png" alt="hero section banner image">
     </section>
 
     <!-- WHAT WE DO -->

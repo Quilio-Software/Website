@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 
 </script>
 
@@ -7,10 +9,10 @@
     <nav class="">
         <div class="nav-main h-24 flex flex-row justify-around items-center bg-gray/900">
             <!-- LOGO -->
-            <div class="logo-container w-28 h-8 flex justify-center items-center">
+            <RouterLink to="/" class="logo-container w-28 h-8 flex justify-center items-center">
                 <!-- Need to fill with LOGO -->
                 <img src="../assets/img/nav/logo/full-logo.svg" alt="Quillio logo">
-            </div>
+            </RouterLink>
             <!-- NAV BUTTONS -->
             <ul class="nav-buttons flex flex-row justify-around gap-3 sm:gap-6 md:gap-16 ease duration-300">
                 <li>
@@ -21,7 +23,7 @@
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/"
+                    <RouterLink to="/about-us"
                         class="flex flex-row gap-2 text-xl sm:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
                         aria-current="page">
                         About <p class="hidden sm:inline ease duration-300">Us</p>

@@ -26,9 +26,9 @@ import EmailForm from './EmailForm.vue';
                         your next big idea.</p>
                 </div>
             </div>
-
-            <EmailForm />
         </div>
+
+        <EmailForm />
 
     </section>
 </template>
