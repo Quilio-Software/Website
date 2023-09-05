@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router';
 
 <template>
     <!-- NAV -->
-    <nav class="">
+    <nav class="fixed top-0 left-0 w-full h-fit z-50">
         <div class="nav-main h-24 flex flex-row justify-around items-center bg-gray/900">
             <!-- LOGO -->
             <RouterLink to="/" class="logo-container w-28 h-8 flex justify-center items-center">
