@@ -31,8 +31,7 @@
                 <div class="relative my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg ease duration-300">
 
                     <img ref="s1Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
-                        src="../assets/img/homepage/services/audio-signal-processing-and-plugins/audio-signal-processing-and-plugins.svg"
-                        alt="audio signal processing and plugins image">
+                        src="../assets/img/homepage/services/service-1.png" alt="audio signal processing and plugins image">
 
                     <div ref="s1Card"
                         class="relative py-10 px-12 w-full sm:w-4/5 md:w-3/4 backdrop-blur-sm rounded-xl bg-gray/900/25 border border-gray/600">
@@ -122,8 +121,7 @@
                     class="relative flex justify-end my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg ease duration-300">
 
                     <img ref="s2Img" class="absolute top-1/2 -translate-y-1/2 left-0 object-contain"
-                        src="../assets/img/homepage/services/neuro-engineering-solutions/neuro-engineering-solutions.svg"
-                        alt="an image of a brain">
+                        src="../assets/img/homepage/services/service-2.png" alt="an image of a brain">
 
                     <div ref="s2Card"
                         class="py-10 px-12 w-full sm:w-4/5 md:w-3/4 backdrop-blur-sm rounded-xl bg-surface/primary/90">
@@ -180,8 +178,7 @@
                 <div class="relative my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg ease duration-300">
 
                     <img ref="s3Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
-                        src="../assets/img/homepage/services/custom-ai-solutions/custom-ai-solutions.svg"
-                        alt="custom ai solutions image">
+                        src="../assets/img/homepage/services/service-3.png" alt="custom ai solutions image">
 
                     <div ref="s3Card"
                         class="relative py-10 px-12 w-full sm:w-4/5 md:w-3/4 backdrop-blur-sm rounded-xl bg-surface/primary/90">
@@ -385,7 +382,6 @@ import { ref, onMounted } from 'vue';
 import { pageTransition, serviceAnimation, testimonialsAndTechStackAnimation } from '../composables/globalAnimations';
 //FOOTER import
 import Footer from '../components/Footer.vue';
-
 //import scrollTrigger
 import scrollTrigger from 'gsap/ScrollTrigger';
 //=======================================================
@@ -521,7 +517,7 @@ onMounted(() => {
 
     //CHANGE: Y position + opacity - (on scroll)
     animations.fromTo(testimonials.value, {
-        opacity: 0.3,
+        opacity: 0.5,
         y: '-20%',
     }, {
         opacity: 1,
@@ -547,7 +543,7 @@ onMounted(() => {
 
     //CHANGE: Y position + opacity - (on scroll)
     animations.fromTo(ourStackInner.value, {
-        opacity: 0.3,
+        opacity: 0.5,
         y: '-20%',
     }, {
         opacity: 1,
@@ -578,7 +574,7 @@ onMounted(() => {
             trigger: contactUsContainer.value,
             start: 'top center',
             end: 'bottom center',
-            scrub: 10,
+            scrub: 5,
         },
     });
 
@@ -589,7 +585,7 @@ onMounted(() => {
             trigger: contactUsContainer.value,
             start: 'top center',
             end: 'bottom center',
-            scrub: 10,
+            scrub: 5,
         },
     });
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-surface/primary">
+    <div ref="footerContainer" class="bg-surface/primary w-full">
         <div class="pt-20 pb-24">
             <div class="flex mx-60 gap-32">
                 <div class="">
@@ -18,7 +18,9 @@
                 </div>
             </div>
         </div>
-        <div class="mx-60 h-1 bg-surface/sunrise"></div>
+        <div class="w-full h-full flex justify-center items-center">
+            <div ref="footerLine" class="w-4/5 mx-60 h-1 bg-surface/sunrise"></div>
+        </div>
         <div class="pb-20">
             <div class="mx-60 h-28 flex justify-between items-center">
                 <div class="w-1/6"></div>
@@ -33,3 +35,32 @@
         </div>
     </div>
 </template>
+
+<script setup>
+//import gsap
+import gsap from 'gsap';
+//scrollTrigger setup
+import scrollTrigger from 'gsap/ScrollTrigger';
+//ref, onMounted imports
+import { ref, onMounted } from 'vue';
+//=======================================================
+gsap.registerPlugin(scrollTrigger);
+//=======================================================
+
+//FOOTER elements to animate
+const footerContainer = ref(null);
+const footerLine = ref(null);
+
+onMounted(() => {
+    gsap.from(footerLine.value, {
+        width: '-50%',
+        scrollTrigger: {
+            trigger: footerContainer.value,
+            start: 'top bottom',
+            end: 'bottom bottom',
+            scrub: 5,
+        }
+    });
+});
+
+</script>
