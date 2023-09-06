@@ -337,19 +337,21 @@
             </div>
         </section>
 
-        <section class="w-full bg-surface/secondary">
+        <!-- CONTACT US SECTION -->
+        <section ref="contactUsContainer" class="w-full bg-surface/secondary">
 
             <div class="py-20 px-5 sm:px-10 md:px-32 lg:px-48 gap-20 flex">
                 <div class="max-w-[50%]">
-                    <h3
-                        class="mb-8 font-avenir text-5xl font-medium leading-[4rem] bg-gradient-2 bg-clip-text text-transparent">
+                    <h3 ref="contactUsTitle"
+                        class="mb-8 font-avenir text-5xl font-medium leading-[4rem] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent">
                         Don’t
                         see a tool you can add to your arsenal? Let us
                         know what we can build for you.
                     </h3>
-                    <div class="mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
+                    <div ref="contactUsLine" class="mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
                     <div>
-                        <p class="mb-10 font-poppins text-2xl font-normal leading-9 text-gray/50">We aim to please. We go
+                        <p ref="contactUsAbout1" class="mb-10 font-poppins text-2xl font-normal leading-9 text-gray/50">We
+                            aim to please. We go
                             above
                             and
                             beyond
@@ -357,7 +359,8 @@
                             that you have the right tools at the right time for your musical creativity and production
                             needs.
                         </p>
-                        <p class="font-poppins text-2xl font-normal leading-9 text-gray/50">Intrigued enough? Let’s have a
+                        <p ref="contactUsAbout2" class="font-poppins text-2xl font-normal leading-9 text-gray/50">Intrigued
+                            enough? Let’s have a
                             conversation about
                             your next big idea.</p>
                     </div>
@@ -367,6 +370,9 @@
             </div>
         </section>
     </div>
+
+    <!-- FOOTER -->
+    <Footer />
 </template>
 
 <script setup>
@@ -376,7 +382,9 @@ import EmailForm from '../components/EmailForm.vue';
 import gsap from 'gsap';
 import { ref, onMounted } from 'vue';
 //globalAnimations.js
-import { pageTransition, serviceAnimation } from '../composables/globalAnimations';
+import { pageTransition, serviceAnimation, testimonialsAndTechStackAnimation } from '../composables/globalAnimations';
+//FOOTER import
+import Footer from '../components/Footer.vue';
 
 //import scrollTrigger
 import scrollTrigger from 'gsap/ScrollTrigger';
@@ -437,6 +445,15 @@ const ourStackTitle = ref(null);
 const cPP = ref(null);
 const python = ref(null);
 const javaScript = ref(null);
+//=======================================================
+
+//CONTACT US ============================================
+const contactUsContainer = ref(null);
+const contactUsTitle = ref(null);
+const contactUsLine = ref(null);
+const contactUsAbout1 = ref(null);
+const contactUsAbout2 = ref(null);
+//=======================================================
 
 //PAGE TRANSITION ANIMATIONS from globalAnimations.js
 //pageTransition(container);
@@ -445,28 +462,54 @@ onMounted(() => {
     //================= HERO SECTION =========================
     //HERO on page load animation
     animations.from(heroTitleContainer.value.children, {
-        delay: 0.5, duration: 2, y: '+100', stagger: 1, autoAlpha: 0, ease: 'back.out(1.7)'
+        delay: 0.5,
+        duration: 2,
+        y: '+100',
+        stagger: 1,
+        autoAlpha: 0,
+        ease: 'back.out(1.7)',
     });
     //HERO background img onscroll animation
     animations.to(heroBg.value, {
         y: '+30%',
-        scrollTrigger: { trigger: heroBg.value, start: 'top', end: 'bottom', scrub: 1 }
+        scrollTrigger: {
+            trigger: heroBg.value,
+            start: 'top',
+            end: 'bottom',
+            scrub: 1,
+        },
     });
     //HERO title onscoll animation
     animations.to(heroTitleContainer.value, {
-        translateY: '150%', gap: '50px',
-        scrollTrigger: { trigger: heroBg.value, start: 'top', end: 'bottom top', scrub: 1 }
+        translateY: '150%',
+        gap: '50px',
+        scrollTrigger: {
+            trigger: heroBg.value,
+            start: 'top',
+            end: 'bottom top',
+            scrub: 1,
+        },
     });
     //========================================================
     //================= WHAT WE DO ===========================
     //Title animation onEnter
     animations.from(whatWeDoTitle.value, {
-        y: '-100%', opacity: 0, duration: 1,
-        scrollTrigger: { trigger: whatWeDoContainer.value, start: 'top center' },
+        y: '-100%',
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: whatWeDoContainer.value,
+            start: 'top center',
+        },
     });
     animations.from(whatWeDoTitle.value, {
         y: '-10%',
-        scrollTrigger: { trigger: whatWeDoContainer.value, start: 'top center', end: 'bottom top', scrub: 1 }
+        scrollTrigger: {
+            trigger: whatWeDoContainer.value,
+            start: 'top center',
+            end: 'bottom top',
+            scrub: 1,
+        },
     })
     //========================================================
     //================= SERVICES =============================
@@ -475,41 +518,99 @@ onMounted(() => {
     serviceAnimation(s3, s3Img, s3Card);
     //========================================================
     //================= TESTIMONIALS =========================
-    animationsTimeline({
+
+    //CHANGE: Y position + opacity - (on scroll)
+    animations.fromTo(testimonials.value, {
+        opacity: 0.3,
+        y: '-20%',
+    }, {
+        opacity: 1,
+        y: '0%',
         scrollTrigger: {
-            trigger: testimonialsOuter.value, start: 'top top', onEnter: () => {
-                console.log('entered testimonials');
-            }
-        },
-    }).from(testimonials.value, {
-        opacity: 0, duration: 0.3,
-    }).from(testimonialsTitle.value, {
-        y: '+100', opacity: 0, duration: 0.3,
-    }).from(testimonialsLogos.value, {
-        y: '+100', opacity: 0, duration: 0.3,
-    }).from(testimonialsQuote.value, {
-        y: '+100', opacity: 0, duration: 0.3,
-    }).from(testimonialsPersona.value, {
-        y: '+100', opacity: 0, duration: 0.3,
+            trigger: testimonials.value,
+            start: 'top bottom',
+            end: 'center center',
+            scrub: 1,
+        }
     });
+
+    //ANIMATE: testimonials inner elements
+    testimonialsAndTechStackAnimation(
+        testimonials,
+        testimonialsTitle,
+        testimonialsLogos,
+        testimonialsQuote,
+        testimonialsPersona);
+
     //========================================================
     //================= OUR STACK ============================
+
+    //CHANGE: Y position + opacity - (on scroll)
+    animations.fromTo(ourStackInner.value, {
+        opacity: 0.3,
+        y: '-20%',
+    }, {
+        opacity: 1,
+        y: '0%',
+        scrollTrigger: {
+            trigger: ourStackInner.value,
+            start: 'top bottom',
+            end: 'center center',
+            scrub: 1,
+        }
+    });
+
+    //ANIMATE: ourStack inner elements
+    testimonialsAndTechStackAnimation(
+        ourStackInner,
+        ourStackTitle,
+        cPP,
+        python,
+        javaScript);
+
+    //========================================================
+    //================= CONTACT US ===========================
+
+    //BACKGROUND GRADIENT - background position move Y (on scroll)
+    animations.from(contactUsTitle.value, {
+        backgroundPositionY: '-200%',
+        scrollTrigger: {
+            trigger: contactUsContainer.value,
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 10,
+        },
+    });
+
+    //PURPLE LINE - width change (on scroll)
+    animations.from(contactUsLine.value, {
+        width: '-200px',
+        scrollTrigger: {
+            trigger: contactUsContainer.value,
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 10,
+        },
+    });
+
+    //CONTACT US - ABOUT US texts
     animationsTimeline({
         scrollTrigger: {
-            trigger: ourStackOuter.value, start: 'top top', onEnter: () => {
-                console.log('entered our stack');
-            }
+            trigger: contactUsContainer.value,
+            start: 'bottom bottom',
         },
-    }).from(ourStackInner.value, {
-        opacity: 0, duration: 0.3,
-    }).from(ourStackTitle.value, {
-        y: '+100', opacity: 0, duration: 0.3,
-    }).from(cPP.value, {
-        y: '+100', opacity: 0, duration: 0.3,
-    }).from(python.value, {
-        y: '+100', opacity: 0, duration: 0.3,
-    }).from(javaScript.value, {
-        y: '+100', opacity: 0, duration: 0.3,
+    }).fromTo(contactUsAbout1.value, {
+        opacity: 0,
+    }, {
+        opacity: 1,
+        ease: 'Power2.easeIn',
+        duration: 0.5,
+    }).fromTo(contactUsAbout2.value, {
+        opacity: 0,
+    }, {
+        opacity: 1,
+        ease: 'Power2.easeIn',
+        duration: 0.5,
     });
 });
 
