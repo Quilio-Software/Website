@@ -34,11 +34,11 @@ export function serviceAnimation(container, img, card) {
     gsap.fromTo(img.value, {
         translateX: '0%',
         opacity: 0.3,
-        y: '-70%',
+        y: '-20%',
     }, {
         translateX: '-10%', 
         opacity: 1, 
-        y: '-50%',
+        y: '0%',
         scrollTrigger: { 
             trigger: container.value, 
             start: 'top bottom', 

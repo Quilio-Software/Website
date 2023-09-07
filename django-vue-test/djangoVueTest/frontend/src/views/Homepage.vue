@@ -375,16 +375,19 @@
 <script setup>
 
 //IMPORTS================================================
-import EmailForm from '../components/EmailForm.vue';
-import gsap from 'gsap';
+//Vue imports
 import { ref, onMounted } from 'vue';
+//GSAP imports
+import gsap from 'gsap';
+import scrollTrigger from 'gsap/ScrollTrigger';
 //globalAnimations.js
 import { pageTransition, serviceAnimation, testimonialsAndTechStackAnimation } from '../composables/globalAnimations';
 //FOOTER import
 import Footer from '../components/Footer.vue';
-//import scrollTrigger
-import scrollTrigger from 'gsap/ScrollTrigger';
+//EmailForm import
+import EmailForm from '../components/EmailForm.vue';
 //=======================================================
+//Register scrollTrigger
 gsap.registerPlugin(scrollTrigger);
 //=======================================================
 
