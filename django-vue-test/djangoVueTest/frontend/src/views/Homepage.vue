@@ -510,35 +510,50 @@
             </div>
         </section>
 
+        <!-- ========================================================================================== -->
         <!-- CONTACT US SECTION -->
+        <!-- ========================================================================================== -->
         <section ref="contactUsContainer" class="w-full bg-surface/secondary">
 
-            <div class="py-20 px-5 sm:px-10 md:px-32 lg:px-48 gap-20 flex">
-                <div class="max-w-[50%]">
+            <!-- ========================================================================================== -->
+            <!-- OUTER CONTAINER -->
+            <!-- ========================================================================================== -->
+            <div
+                class="py-[8vw] px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-48 gap-8 sm:gap-20 md:gap-14 lg:gap-20 flex flex-col md:flex-row ease duration-300">
+                <!-- ========================================================================================== -->
+                <!-- INNER CONTAINER -->
+                <!-- ========================================================================================== -->
+                <div class="w-full">
+                    <!-- ========================================================================================== -->
+                    <!-- TITLE -->
+                    <!-- ========================================================================================== -->
                     <h3 ref="contactUsTitle"
-                        class="mb-8 font-avenir text-5xl font-medium leading-[4rem] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent">
-                        Don’t
-                        see a tool you can add to your arsenal? Let us
-                        know what we can build for you.
+                        class="text-4xl sm:text-5xl md:text-4xl lg:text-5xl mb-8 font-avenir font-medium leading-[1.4] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.4] 2xl:leading-[1.4] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent ease duration-300">
+                        We believe the best clients are those you form deep relationships with.
                     </h3>
-                    <div ref="contactUsLine" class="mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
+                    <!-- ========================================================================================== -->
+                    <!-- LINE -->
+                    <!-- ========================================================================================== -->
+                    <div ref="contactUsLine" class="mb-16 xl:mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
+                    <!-- ========================================================================================== -->
+                    <!-- ABOUT -->
+                    <!-- ========================================================================================== -->
                     <div>
-                        <p ref="contactUsAbout1" class="mb-10 font-poppins text-2xl font-normal leading-9 text-gray/50">We
-                            aim to please. We go
-                            above
-                            and
-                            beyond
-                            to ensure
-                            that you have the right tools at the right time for your musical creativity and production
-                            needs.
+                        <p ref="contactUsAbout1"
+                            class="mb-10 font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                            We
+                            aim to please. We go above and beyond to ensure that you gain enough value to keep coming back
                         </p>
-                        <p ref="contactUsAbout2" class="font-poppins text-2xl font-normal leading-9 text-gray/50">Intrigued
-                            enough? Let’s have a
-                            conversation about
-                            your next big idea.</p>
+                        <p ref="contactUsAbout2"
+                            class="font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                            Intrigued
+                            enough? Let’s have a conversation about your next big idea.</p>
                     </div>
                 </div>
 
+                <!-- ========================================================================================== -->
+                <!-- EMAIL -->
+                <!-- ========================================================================================== -->
                 <EmailForm />
             </div>
         </section>

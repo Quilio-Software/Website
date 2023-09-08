@@ -1,48 +1,114 @@
 <template>
-    <div class="email-form-container max-w-2xl bg-surface/primary rounded-lg">
-        <form class="m-10 flex flex-col gap-8" @submit.prevent="submitForm">
-            <div class="flex gap-8">
-                <div class="w-1/2 flex flex-col gap-4">
-                    <label class="font-poppins text-2xl font-light text-gray/50" for="name">Name *</label>
-                    <input placeholder="John Doe"
-                        class="h-10 w-64 border-1 border-primary/400 bg-surface/secondary rounded-md" type="text" id="name"
-                        v-model="form.name" required>
+    <!-- ========================================================================================== -->
+    <!-- OUTER CONTAINER max-w-2xl -->
+    <!-- ========================================================================================== -->
+    <div class="email-form-container h-fit w-full bg-surface/primary rounded-lg overflow-hidden">
+        <!-- ========================================================================================== -->
+        <!-- INNER CONTAINER -->
+        <!-- ========================================================================================== -->
+        <div class="p-6 sm:p-12 md:p-8 lg:p-10 ease duration-300">
+            <form class="w-full flex flex-col gap-6 sm:gap-8 ease duration-300" @submit.prevent="submitForm">
+                <!-- ========================================================================================== -->
+                <!-- ROW 1 - name, email -->
+                <!-- ========================================================================================== -->
+                <div class="w-full flex gap-6 sm:gap-8 ease duration-300">
+                    <!-- ========================================================================================== -->
+                    <!-- NAME CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="max-w-1/2 flex flex-col gap-3 sm:gap-4 flex-grow overflow-hidden">
+                        <!-- ========================================================================================== -->
+                        <!-- LABEL -->
+                        <!-- ========================================================================================== -->
+                        <label
+                            class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 ease duration-300"
+                            for="name">Name
+                            *</label>
+                        <!-- ========================================================================================== -->
+                        <!-- FORM INPUT -->
+                        <!-- ========================================================================================== -->
+                        <input placeholder="John Doe"
+                            class="h-8 sm:h-10 border-1 border-primary/400 bg-surface/secondary rounded-md ease duration-300"
+                            type="text" id="name" v-model="form.name" required>
+                    </div>
+
+                    <!-- ========================================================================================== -->
+                    <!-- EMAIL CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="max-w-1/2 flex flex-col gap-3 sm:gap-4 flex-grow overflow-hidden ease duration-300">
+                        <!-- ========================================================================================== -->
+                        <!-- LABEL -->
+                        <!-- ========================================================================================== -->
+                        <label
+                            class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 ease duration-300"
+                            for="email">Email
+                            *</label>
+                        <!-- ========================================================================================== -->
+                        <!-- FORM INPUT -->
+                        <!-- ========================================================================================== -->
+                        <input placeholder="johndoe@site.com"
+                            class="h-8 sm:h-10 border-1 border-primary/400 bg-surface/secondary rounded-md ease duration-300"
+                            type="email" id="email" v-model="form.email" required>
+                    </div>
                 </div>
 
-                <div class="w-1/2 flex flex-col gap-4">
-                    <label class="font-poppins text-2xl font-light text-gray/50" for="email">Email *</label>
-                    <input placeholder="johndoe@site.com"
-                        class="h-10 w-64 border-1 border-primary/400 bg-surface/secondary rounded-md" type="email"
-                        id="email" v-model="form.email" required>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-4">
-                <label class="font-poppins text-2xl font-light text-gray/50" for="phone">Phone</label>
-                <input placeholder="1234567890" class="h-10 border-1 border-primary/400 bg-surface/secondary rounded-md"
-                    type="tel" id="phone" v-model="form.phone">
-            </div>
-
-            <div class="flex flex-col gap-4">
-                <label class="font-poppins text-2xl font-light text-gray/50" for="message">Message</label>
-                <textarea placeholder="Some text over here"
-                    class="h-28 border-1 border-primary/400 bg-surface/secondary rounded-md" id="message"
-                    v-model="form.message"></textarea>
-            </div>
-
-            <div class="flex justify-between items-center">
-                <div class="flex gap-2">
-                    <input class="w-5 h-5 border-1 border-primary/400 bg-surface/secondary rounded-md" type="checkbox"
-                        id="acceptTerms" v-model="form.accept_terms" required>
-                    <label class="font-poppins text-base font-light text-gray/50" for="acceptTerms">I agree with <a
-                            class="text-secondary/700-main" href="...">terms</a></label>
+                <!-- ========================================================================================== -->
+                <!-- ROW 2 - phone PHONE CONTAINER -->
+                <!-- ========================================================================================== -->
+                <div class="flex flex-col gap-3 sm:gap-4 duration-300">
+                    <!-- ========================================================================================== -->
+                    <!-- LABEL -->
+                    <!-- ========================================================================================== -->
+                    <label
+                        class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 duration-300"
+                        for="phone">Phone</label>
+                    <!-- ========================================================================================== -->
+                    <!-- FORM INPUT -->
+                    <!-- ========================================================================================== -->
+                    <input placeholder="1234567890"
+                        class="h-8 sm:h-10 border-1 border-primary/400 bg-surface/secondary rounded-md duration-300"
+                        type="tel" id="phone" v-model="form.phone">
                 </div>
 
-                <button class="h-14 w-52 bg-primary/400 rounded-md font-light font-poppins text-xl text-gray/50"
-                    type="submit">Send
-                    Message</button>
-            </div>
-        </form>
+                <!-- ========================================================================================== -->
+                <!-- ROW 3 - message MESSAGE CONTAINER -->
+                <!-- ========================================================================================== -->
+                <div class="flex flex-col gap-3 sm:gap-4 duration-300">
+                    <!-- ========================================================================================== -->
+                    <!-- FORM INPUT -->
+                    <!-- ========================================================================================== -->
+                    <label
+                        class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 duration-300"
+                        for="message">Message</label>
+                    <textarea placeholder="Some text over here"
+                        class="h-28 border-1 border-primary/400 bg-surface/secondary rounded-md" id="message"
+                        v-model="form.message"></textarea>
+                </div>
+
+                <!-- ========================================================================================== -->
+                <!-- ROW 4 - terms, send btn -->
+                <!-- ========================================================================================== -->
+                <div class="flex justify-between items-center gap-6">
+                    <!-- ========================================================================================== -->
+                    <!-- TERMS & CONDITIONS CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center duration-300">
+                        <input class="w-5 h-5 border-1 border-primary/400 bg-surface/secondary rounded-md" type="checkbox"
+                            id="acceptTerms" v-model="form.accept_terms" required>
+                        <label class="font-poppins text-sm sm:text-base font-light text-gray/50 duration-300"
+                            for="acceptTerms">I agree
+                            with <a class="text-secondary/700-main" href="...">terms</a></label>
+                    </div>
+
+                    <!-- ========================================================================================== -->
+                    <!-- BUTTON -->
+                    <!-- ========================================================================================== -->
+                    <button
+                        class="h-10 sm:h-14 w-20 sm:w-40 lg:w-52 bg-primary/400 rounded-md font-light font-poppins text-lg lg:text-xl text-gray/50 duration-300"
+                        type="submit">Send
+                        <span class="hidden sm:inline">Message</span></button>
+                </div>
+            </form>
+        </div>
     </div>
 </template>
   
