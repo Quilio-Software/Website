@@ -1,246 +1,366 @@
+<!-- ========================================================================================== -->
+<!-- 
+
+    NOTE TO SELF: 
+        - search: 'delete' -> items to delete
+        - search: 'animate' -> animateable objects
+
+-->
+<!-- ========================================================================================== -->
+
 <template>
-    <div ref="container">
-        <!-- HERO SECTION -->
-        <section class="relative h-[962px] w-full flex justify-center items-center overflow-hidden bg-black">
-            <div ref="heroTitleContainer" class="z-10 flex flex-col justify-center items-center gap-8 cursor-default">
-                <h3 class="text-center text-7xl font-sans font-bold tracking-wide text-gray/50">Building for
-                    the future, today.
+    <!-- ========================================================================================== -->
+    <!-- PAGE CONTENT CONTAINER -->
+    <!-- ========================================================================================== -->
+    <div ref="container" class="bg-hompage-bg bg-cover bg-center">
+        <!-- ========================================================================================== -->
+        <!-- HERO SECTION CONTAINER -->
+        <!-- ========================================================================================== -->
+        <section class="relative h-[962px] w-full flex justify-center items-center overflow-hidden">
+            <!-- ========================================================================================== -->
+            <!-- HERO SECTION INNER (TITLE) CONTAINER -->
+            <!-- ========================================================================================== -->
+            <div ref="heroTitleContainer" class="mx-10 flex flex-col justify-center items-center gap-8 cursor-default">
+                <!-- TITLE PRIMARY -->
+                <h3
+                    class="text-center text-5xl sm:text-6xl lg:text-7xl font-sans font-bold tracking-wide text-gray/50 ease duration-300">
+                    Building for
+                    the future, <span class="bg-gradient-2-homepage-title bg-clip-text text-transparent">today.</span>
                 </h3>
+                <!-- TITLE SECONDARY -->
                 <h5
-                    class="text-center font-avenir text-3xl font-medium tracking-wide bg-surface/sunrise bg-clip-text text-transparent">
+                    class="text-center font-avenir text-xl sm:text-2xl lg:text-3xl font-medium tracking-wide text-primary/400 ease duration-300">
                     Audio engineering
                     solutions
                     made by engineers, for artists</h5>
             </div>
-            <img ref="heroBg"
+            <!-- OLD IMAGE - delete (ref="heroBg") -->
+            <!-- <img ref="heroBg"
                 class="absolute h-full min-w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-2/4 object-cover opacity-70"
-                src="../assets/img/banner.png" alt="hero section banner image">
+                src="../assets/img/banner.png" alt="hero section banner image"> -->
         </section>
 
-        <!-- WHAT WE DO -->
-        <section ref="whatWeDoContainer" class="w-full h-60 flex justify-center items-center bg-gray/900">
-            <h3 ref="whatWeDoTitle" class="font-uncut text text-6xl font-semibold tracking-wide text-gray/50">What We Do
+        <!-- ========================================================================================== -->
+        <!-- WHAT WE DO SECTION -->
+        <!-- ========================================================================================== -->
+        <section ref="whatWeDoContainer" class="w-full h-60 flex justify-center items-center">
+            <h3 ref="whatWeDoTitle"
+                class="font-uncut text-5xl sm:text-6xl font-semibold tracking-wide text-gray/50 ease duration-300">
+                What We Do
             </h3>
         </section>
 
-        <!-- SERVICES -->
-        <section ref="services" class="w-full flex flex-col items-center bg-gray/900">
+        <!-- ========================================================================================== -->
+        <!-- SERVICES SECTION -->
+        <!-- ========================================================================================== -->
+        <section ref="services" class="w-full flex flex-col items-center">
 
-            <!-- Audio Signal Processing and Plugins -->
-            <div ref="s1" class="w-full">
-                <div class="relative my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg ease duration-300">
+            <!-- ========================================================================================== -->
+            <!-- S1 CARD OUTER CONTAINER - Audio Signal Processing and Plugins -->
+            <!-- ========================================================================================== -->
+            <div ref="s1Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
-                    <img ref="s1Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
-                        src="../assets/img/homepage/services/service-1.png" alt="audio signal processing and plugins image">
+                <!-- OLD IMAGE - delete (ref="s1Img") -->
+                <!-- <img ref="s1Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
+                        src="../assets/img/homepage/services/service-1.png" alt="audio signal processing and plugins image"> -->
 
-                    <div ref="s1Card"
-                        class="relative py-10 px-12 w-full sm:w-4/5 md:w-3/4 backdrop-blur-sm rounded-xl bg-gray/900/25 border border-gray/600">
-                        <h5 class="mb-5 sm:mb-10 font-uncut text-2xl sm:text-4xl font-bold text-gray/50 ease duration-300">
-                            Audio
-                            Signal
-                            Processing and
-                            Plugins</h5>
-                        <div class="mb-5 sm:mb-10 h-1 w-60 bg-primary/400 rounded-full"></div>
-                        <p
-                            class="font-poppins text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray/200 ease duration-300">
-                            In
-                            the world of
-                            audio, the right
-                            tools don’t just make the job easier </p>
-                        <p
-                            class="mb-5 sm:mb-10 font-poppins text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray/200 ease duration-300">
-                            - the tool is the job. Our team of experienced developers enable
-                            you to do what you do without thinking about it.
-                        </p>
-                        <div class="flex">
-                            <div class="flex flex-col gap-9 mr-10">
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Instrument plugins
-                                        for musicians</p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Mixing and mastering tools
-                                        for recording engineers
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Audio solutions
-                                        for businesses
-                                    </p>
-                                </div>
+                <!-- ========================================================================================== -->
+                <!-- S1 CARD INNER CONTAINER -->
+                <!-- ========================================================================================== -->
+                <div ref="s1Inner"
+                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
+                    <!-- ========================================================================================== -->
+                    <!-- S1 CARD TITLE & ABOUT TEXT -->
+                    <!-- ========================================================================================== -->
+                    <h5 class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                        Audio
+                        Signal
+                        Processing and
+                        Plugins</h5>
+                    <!-- line - animate -->
+                    <div class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <p
+                        class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        In
+                        the world of
+                        audio, the right
+                        tools don’t just make the job easier - the tool is the job. Our team of experienced
+                        developers enable
+                        you to do what you do without thinking about it.</p>
+                    <!-- ========================================================================================== -->
+                    <!-- S1 POINTER COLUMNS CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="flex mt-2">
+                        <!-- ========================================================================================== -->
+                        <!-- S1 COLUMN 1 -->
+                        <!-- ========================================================================================== -->
+                        <div class="flex flex-col gap-9 mr-6 sm:mr-10 lg:mr-20">
+                            <!-- ========================================================================================== -->
+                            <!-- S1 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Instrument plugins
+                                    for musicians</p>
                             </div>
-                            <div class="mb-5 sm:mb-10 flex flex-col gap-9">
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Speech processing
-                                        software
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Custom-built
-                                        audio software
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Noise detection
-                                        and reduction tools
-                                    </p>
-                                </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S1 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Mixing and mastering tools
+                                    for recording engineers
+                                </p>
                             </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S1 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Audio solutions
+                                    for businesses
+                                </p>
+                            </div>
+                        </div>
+                        <!-- ========================================================================================== -->
+                        <!-- S1 COLUMN 2 -->
+                        <!-- ========================================================================================== -->
+                        <div class="flex flex-col gap-9">
+                            <!-- ========================================================================================== -->
+                            <!-- S1 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Speech processing
+                                    software
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S1 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Custom-built
+                                    audio software
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S1 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Noise detection
+                                    and reduction tools
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Neuro Engineering Solutions -->
-            <div ref="s2" class="w-full flex">
-                <div
-                    class="relative flex justify-end my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg ease duration-300">
+            <!-- ========================================================================================== -->
+            <!-- S2 CARD OUTER CONTAINER -->
+            <!-- ========================================================================================== -->
+            <div ref="s1Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
-                    <img ref="s2Img" class="absolute top-1/2 -translate-y-1/2 left-0 object-contain"
-                        src="../assets/img/homepage/services/service-2.png" alt="an image of a brain">
+                <!-- OLD IMAGE - delete (ref="s2Img") -->
+                <!-- <img ref="s2Img" class="absolute top-1/2 -translate-y-1/2 left-0 object-contain"
+                        src="../assets/img/homepage/services/service-2.png" alt="an image of a brain"> -->
 
-                    <div ref="s2Card"
-                        class="py-10 px-12 w-full sm:w-4/5 md:w-3/4 backdrop-blur-sm rounded-xl bg-surface/primary/90">
-
-                        <h5 class="mb-5 sm:mb-10 font-uncut text-2xl sm:text-4xl font-bold text-gray/50 ease duration-300">
-                            Neuro-Engineering Solutions</h5>
-                        <div class="mb-5 sm:mb-10 h-1 w-60 bg-primary/400 rounded-full"></div>
-
-                        <p
-                            class="mb-5 sm:mb-10 font-poppins text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray/200 ease duration-300">
-                            Scientists have been trying to unlock the secrets of the brain for generations. We’re not saying
-                            we’ve succeeded - but we’re pretty close, and our solutions reflect that.</p>
-
-                        <div class="flex flex-col">
-                            <div class="mb-5 sm:mb-10 flex justify-around gap-9">
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Custom-designed
-                                        research tools
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Engineering solutions
-                                        for research labs
-                                    </p>
-                                </div>
+                <!-- ========================================================================================== -->
+                <!-- S2 CARD INNER CONTAINER -->
+                <!-- ========================================================================================== -->
+                <div ref="s2Inner"
+                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
+                    <!-- ========================================================================================== -->
+                    <!-- CARD TITLE & ABOUT TEXT -->
+                    <!-- ========================================================================================== -->
+                    <h5 class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                        Neuro-Engineering Solutions</h5>
+                    <!-- line - animate -->
+                    <div class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <p
+                        class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        Scientists have been trying to unlock the secrets of the brain for generations. We’re not
+                        saying
+                        we’ve succeeded - but we’re pretty close, and our solutions reflect that.</p>
+                    <!-- ========================================================================================== -->
+                    <!-- POINTER ROWS CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="flex flex-col gap-9">
+                        <!-- ========================================================================================== -->
+                        <!-- ROW 1 -->
+                        <!-- ========================================================================================== -->
+                        <div class="flex gap-6 sm:gap-10 md:gap-24 lg:gap-32">
+                            <!-- ========================================================================================== -->
+                            <!-- POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Custom-designed
+                                    research tools
+                                </p>
                             </div>
-                            <div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Assistive technologies for people with neurological disorders
-                                    </p>
-                                </div>
+                            <!-- ========================================================================================== -->
+                            <!-- POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Engineering solutions
+                                    for research labs
+                                </p>
                             </div>
+                            <!-- ========================================================================================== -->
                         </div>
-
+                        <!-- ========================================================================================== -->
+                        <!-- ROW 2 -->
+                        <!-- ========================================================================================== -->
+                        <div>
+                            <!-- ========================================================================================== -->
+                            <!-- POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Assistive technologies for people with neurological disorders
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
+                        </div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- Custom AI Solutions -->
-            <div ref="s3" class="w-full">
-                <div class="relative my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg ease duration-300">
+            <!-- ========================================================================================== -->
+            <!-- S3 CARD OUTER CONTAINER -->
+            <!-- ========================================================================================== -->
+            <div ref="s3Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
-                    <img ref="s3Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
-                        src="../assets/img/homepage/services/service-3.png" alt="custom ai solutions image">
+                <!-- OLD IMAGE - delete (ref="s3Img") -->
+                <!-- <img ref="s3Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
+                        src="../assets/img/homepage/services/service-3.png" alt="custom ai solutions image"> -->
 
-                    <div ref="s3Card"
-                        class="relative py-10 px-12 w-full sm:w-4/5 md:w-3/4 backdrop-blur-sm rounded-xl bg-surface/primary/90">
-                        <h5 class="mb-5 sm:mb-10 font-uncut text-2xl sm:text-4xl font-bold text-gray/50 ease duration-300">
-                            Custom AI Solutions</h5>
-                        <div class="mb-5 sm:mb-10 h-1 w-60 bg-primary/400 rounded-full"></div>
-                        <p
-                            class="mb-5 sm:mb-10 font-poppins text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray/200 ease duration-300">
-                            AI is both the Holy Grail of the Internet and the sign of End Times. We see it exactly as it is
-                            though - a tool to make our lives, and by extension, your lives easier. </p>
-                        <div class="flex">
-                            <div class="flex flex-col gap-9 mr-10">
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Customised NLP models for chatbots
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Object detection and recognition models
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Fraud detection models for financial institutions
-                                    </p>
-                                </div>
+                <!-- ========================================================================================== -->
+                <!-- S3 CARD INNER CONTAINER -->
+                <!-- ========================================================================================== -->
+                <div ref="s3Inner"
+                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
+                    <!-- ========================================================================================== -->
+                    <!-- S3 CARD TITLE & ABOUT TEXT -->
+                    <!-- ========================================================================================== -->
+                    <h5 class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                        Custom AI Solutions</h5>
+                    <!-- line - animate -->
+                    <div class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <p
+                        class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        AI is both the Holy Grail of the Internet and the sign of End Times. We see it exactly as it is
+                        though - a tool to make our lives, and by extension, your lives easier. </p>
+                    <!-- ========================================================================================== -->
+                    <!-- S3 POINTER COLUMNS CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="flex mt-2">
+                        <!-- ========================================================================================== -->
+                        <!-- S3 COLUMN 1 -->
+                        <!-- ========================================================================================== -->
+                        <div class="flex flex-col gap-9 mr-6 sm:mr-10 lg:mr-20">
+                            <!-- ========================================================================================== -->
+                            <!-- S3 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Customised NLP models for chatbots
+                                </p>
                             </div>
-                            <div class="mb-5 sm:mb-10 flex flex-col gap-9">
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Predictive maintenance for industrial equipment
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        Recommender systems for E-commerce platforms
-                                    </p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <img class="" src="../assets/img/homepage/services/arrow.svg"
-                                        alt="arrow pointing towards text">
-                                    <p
-                                        class="font-poppins leading-7 font-normal text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
-                                        and so on...
-                                    </p>
-                                </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S3 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Object detection and recognition models
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S3 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Fraud detection models for financial institutions
+                                </p>
+                            </div>
+                        </div>
+                        <!-- ========================================================================================== -->
+                        <!-- S3 COLUMN 1 -->
+                        <!-- ========================================================================================== -->
+                        <div class="mb-5 sm:mb-10 flex flex-col gap-9">
+                            <!-- ========================================================================================== -->
+                            <!-- S3 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Predictive maintenance for industrial equipment
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S3 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    Recommender systems for E-commerce platforms
+                                </p>
+                            </div>
+                            <!-- ========================================================================================== -->
+                            <!-- S3 POINTER CONTAINER -->
+                            <!-- ========================================================================================== -->
+                            <div class="flex items-center gap-4">
+                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                    alt="arrow pointing towards text">
+                                <p
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    and so on...
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -248,51 +368,83 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS -->
-        <section ref="testimonialsOuter" class="flex flex-col items-center bg-gray/900">
+        <!-- ========================================================================================== -->
+        <!-- TESTIMONIALS SECTION -->
+        <!-- ========================================================================================== -->
+        <section ref="testimonialsOuter" class="flex flex-col items-center">
+            <!-- ========================================================================================== -->
+            <!-- T_OUTER CONTAINER -->
+            <!-- ========================================================================================== -->
             <div class="w-full h-fit">
+                <!-- ========================================================================================== -->
+                <!-- T_INNER CONTAINER -->
+                <!-- ========================================================================================== -->
                 <div ref="testimonials"
                     class="relative py-16 flex flex-col items-center justify-center my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg bg-surface/secondary ease duration-300">
-
+                    <!-- ========================================================================================== -->
+                    <!-- T_TITLE -->
+                    <!-- ========================================================================================== -->
                     <h3 ref="testimonialsTitle"
-                        class="text-4xl text-center mb-14 font-semibold tracking-wider text-gray/50">Trusted By</h3>
-
+                        class="text-3xl sm:text-4xl text-center mb-14 font-semibold tracking-wider text-gray/50">
+                        Trusted By</h3>
+                    <!-- ========================================================================================== -->
                     <!-- TABS -->
+                    <!-- ========================================================================================== -->
                     <div ref="testimonialsLogos" class="mb-14 w-11/12 flex justify-center">
+                        <!-- ========================================================================================== -->
+                        <!-- TAB --><!-- -- ACTIVE -- -->
+                        <!-- ========================================================================================== -->
                         <div
-                            class="w-1/5 h-20 sm:h-28 md:h-36 lg:h-36 xl:h-40 flex justify-center items-center bg-secondary/700-main/10 border-b-8 border-secondary/700-main ease duration-300">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
-                        </div><!-- active -->
-                        <div
-                            class="w-1/5 h-20 sm:h-28 md:h-36 lg:h-36 xl:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
-                        </div>
-                        <div
-                            class="w-1/5 h-20 sm:h-28 md:h-36 lg:h-36 xl:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300">
+                            class="w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center bg-secondary/700-main/10 border-b-8 border-secondary/700-main ease duration-300">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
+                        <!-- ========================================================================================== -->
+                        <!-- TAB -->
+                        <!-- ========================================================================================== -->
                         <div
-                            class="w-1/5 h-20 sm:h-28 md:h-36 lg:h-36 xl:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300">
+                            class="w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
+                        <!-- ========================================================================================== -->
+                        <!-- TAB -->
+                        <!-- ========================================================================================== -->
                         <div
-                            class="w-1/5 h-20 sm:h-28 md:h-36 lg:h-36 xl:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300">
+                            class="w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                        </div>
+                        <!-- ========================================================================================== -->
+                        <!-- TAB -->
+                        <!-- ========================================================================================== -->
+                        <div
+                            class="w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                        </div>
+                        <!-- ========================================================================================== -->
+                        <!-- TAB -->
+                        <!-- ========================================================================================== -->
+                        <div
+                            class="w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                     </div>
-
+                    <!-- ========================================================================================== -->
                     <!-- QUOTE -->
+                    <!-- ========================================================================================== -->
                     <p ref="testimonialsQuote"
-                        class="mb-14 italic font-poppins font-medium text-2xl sm:text-3xl tracking-wide text-center text-gray/50">
+                        class="mb-14 italic font-poppins font-medium text-xl sm:text-2xl md:text-3xl tracking-wide text-center text-gray/50">
                         “iawuefh awuieo fhaweioufh awepifhuaw pifuhqwiofuh qw iouefhwe fhqweuiofh
                         qweioufhqwiofuhweoiufhqwoif
                         uh.”
                     </p>
-
+                    <!-- ========================================================================================== -->
                     <!-- PERSONA -->
-                    <div ref="testimonialsPersona" class="flex items-center gap-5">
-                        <img src="../assets/img/homepage/testimonials/persona/person.png" alt="persona">
-                        <h3 class="font-avenir font-light tracking-wide text-2xl sm:text-3xl text-gray/50">Full Name -
+                    <!-- ========================================================================================== -->
+                    <div ref="testimonialsPersona" class="flex items-center gap-5 mx-6">
+                        <img class="w-12" src="../assets/img/homepage/testimonials/persona/person.png" alt="persona">
+                        <h3
+                            class="font-avenir font-light tracking-wide text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray/50">
+                            Full
+                            Name -
                             Company
                             Name</h3>
                     </div>
@@ -300,33 +452,57 @@
             </div>
         </section>
 
-        <!-- OUR STACK -->
+        <!-- ========================================================================================== -->
+        <!-- OUR STACK SECTION -->
+        <!-- ========================================================================================== -->
         <section ref="ourStackOuter" class="flex flex-col items-center bg-gray/900">
 
+            <!-- ========================================================================================== -->
+            <!-- OS OUTER CONTAINER -->
+            <!-- ========================================================================================== -->
             <div class="w-full">
+                <!-- ========================================================================================== -->
+                <!-- OS INNER CONTAINER -->
+                <!-- ========================================================================================== -->
                 <div ref="ourStackInner"
                     class="relative py-16 flex flex-col items-center justify-center my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg bg-surface/secondary ease duration-300">
-
-                    <h3 ref="ourStackTitle" class="mb-14 text-4xl text-center font-semibold tracking-wider text-gray/50">Our
+                    <!-- ========================================================================================== -->
+                    <!-- OS TITLE -->
+                    <!-- ========================================================================================== -->
+                    <h3 ref="ourStackTitle"
+                        class="text-3xl sm:text-4xl mb-14 text-center font-semibold tracking-wider text-gray/50">Our
                         Tech Stack</h3>
-
-                    <!-- Stacks -->
-                    <div class="flex flex-row justify-center items-center gap-16 md:gap-24">
-                        <div ref="cPP" class="my-8">
-                            <img class="mb-8" src="../assets/img/homepage/tech-stack/c++.png" alt="c++ logo">
-                            <h3 class="text-center font-avenir font-light tracking-wide text-2xl sm:text-3xl text-gray/50">
+                    <!-- ========================================================================================== -->
+                    <!-- OS STACKS -->
+                    <!-- ========================================================================================== -->
+                    <div class="flex flex-row justify-center items-center gap-8 sm:gap-16 md:gap-24">
+                        <!-- ========================================================================================== -->
+                        <!-- OS CPP -->
+                        <!-- ========================================================================================== -->
+                        <div ref="cPP" class="w-1/4 my-8 flex flex-col justify-center items-center">
+                            <img class="w-14 sm:w-20 md:w-24 lg:w-36 mb-8 duration-300"
+                                src="../assets/img/homepage/tech-stack/c++.png" alt="c++ logo">
+                            <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
                                 C++
                             </h3>
                         </div>
-                        <div ref="python" class="my-8">
-                            <img class="mb-8" src="../assets/img/homepage/tech-stack/python.png" alt="python logo">
-                            <h3 class="text-center font-avenir font-light tracking-wide text-2xl sm:text-3xl text-gray/50">
+                        <!-- ========================================================================================== -->
+                        <!-- OS PYTHON -->
+                        <!-- ========================================================================================== -->
+                        <div ref="python" class="w-1/4 my-8 flex flex-col justify-center items-center">
+                            <img class="w-16 sm:w-24 md:w-28 lg:w-40 mb-8 duration-300"
+                                src="../assets/img/homepage/tech-stack/python.png" alt="python logo">
+                            <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
                                 Python</h3>
                         </div>
-                        <div ref="javaScript" class="my-8">
-                            <img class="mb-8" src="../assets/img/homepage/tech-stack/javascript.png" alt="javascript logo">
-                            <h3 class="text-center font-avenir font-light tracking-wide text-2xl sm:text-3xl text-gray/50">
-                                Javascript</h3>
+                        <!-- ========================================================================================== -->
+                        <!-- OS JAVSCRIPT -->
+                        <!-- ========================================================================================== -->
+                        <div ref="javaScript" class="w-1/4 my-8 flex flex-col justify-center items-center">
+                            <img class="w-16 sm:w-24 md:w-28 lg:w-40 mb-8 ease duration-300"
+                                src="../assets/img/homepage/tech-stack/javascript.png" alt="javascript logo">
+                            <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
+                                JavaScript</h3>
                         </div>
                     </div>
 
@@ -374,7 +550,9 @@
 
 <script setup>
 
-//IMPORTS================================================
+//========================================================================================================================
+//==================================================== IMPORTS ===========================================================
+
 //Vue imports
 import { ref, onMounted } from 'vue';
 //GSAP imports
@@ -390,6 +568,9 @@ import EmailForm from '../components/EmailForm.vue';
 //Register scrollTrigger
 gsap.registerPlugin(scrollTrigger);
 //=======================================================
+
+//========================================================================================================================
+//================================================= PAGE ELEMENTS ========================================================
 
 //FULL PAGE CONTAINER//==================================
 const container = ref(null);
@@ -413,9 +594,10 @@ const whatWeDoTitle = ref(null);
 //SERVICES SECTION=======================================
 const services = ref(null);//container
 //SERVICE 1 (Audio Signal Processing and Plugins)
-const s1 = ref(null);
+const s1Outer = ref(null);
+const s1Inner = ref(null);
+// delete
 const s1Img = ref(null);
-const s1Card = ref(null);
 
 //SERVICE 2 (Neuro Engineering Solutions)
 const s2 = ref(null);
@@ -457,6 +639,9 @@ const contactUsAbout2 = ref(null);
 //PAGE TRANSITION ANIMATIONS from globalAnimations.js
 //pageTransition(container);
 
+//========================================================================================================================
+//================================================= PAGE ANIMATIONS ======================================================
+/* 
 onMounted(() => {
     //================= HERO SECTION =========================
     //HERO on page load animation
@@ -611,6 +796,6 @@ onMounted(() => {
         ease: 'Power2.easeIn',
         duration: 0.5,
     });
-});
+}); */
 
 </script>
