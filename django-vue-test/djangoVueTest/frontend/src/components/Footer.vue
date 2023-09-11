@@ -6,29 +6,33 @@
         <!-- ========================================================================================== -->
         <!-- ROW 1 OUER CONTAINER - Logo, Services, Company -->
         <!-- ========================================================================================== -->
-        <div class="pt-14 sm:pt-20 pb-16 sm:pb-24 flex justify-center">
+        <div class="pt-14 sm:pt-20 pb-16 sm:pb-24 flex justify-center ease duration-300">
             <!-- ========================================================================================== -->
             <!-- ROW 1 INNER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div class="flex w-4/5 gap-8 sm:gap-16 md:gap-24 lg:gap-32">
+            <div class="flex w-4/5 gap-8 sm:gap-16 md:gap-24 lg:gap-32 ease duration-300">
                 <!-- ========================================================================================== -->
                 <!-- IMG CONTAINER -->
                 <!-- ========================================================================================== -->
                 <RouterLink to="/">
-                    <img class="w-16 sm:w-fit" src="../assets/img/nav/logo/full-logo.svg" alt="quilio logo">
+                    <img class="w-16 sm:w-fit ease duration-300" src="../assets/img/nav/logo/full-logo.svg"
+                        alt="quilio logo">
                 </RouterLink>
                 <!-- ========================================================================================== -->
                 <!-- SERVICES CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div class="flex flex-col gap-3">
                     <h3
-                        class="mb-1 font-avenir text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray/50 cursor-default">
+                        class="mb-1 font-avenir text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray/50 cursor-default ease duration-300">
                         Services</h3>
-                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50" href="">Bug
+                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50 ease duration-300"
+                        href="">Bug
                         Tracker</a>
-                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50" href="">VST
+                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50 ease duration-300"
+                        href="">VST
                         Development</a>
-                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50" href="">Beta
+                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50 ease duration-300"
+                        href="">Beta
                         Testing</a>
                 </div>
                 <!-- ========================================================================================== -->
@@ -36,13 +40,14 @@
                 <!-- ========================================================================================== -->
                 <div class="flex flex-col gap-3">
                     <h3
-                        class="mb-1 font-avenir text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray/50 cursor-default">
+                        class="mb-1 font-avenir text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray/50 cursor-default ease duration-300">
                         Company</h3>
                     <RouterLink to="/about-us"
-                        class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50">About Us
+                        class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50 ease duration-300">
+                        About Us
                     </RouterLink>
                     <RouterLink to="/contact-us"
-                        class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50">
+                        class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50 ease duration-300">
                         Contact Us
                     </RouterLink>
                 </div>
@@ -57,21 +62,23 @@
         <!-- ========================================================================================== -->
         <!-- QUILIO STAMP -->
         <!-- ========================================================================================== -->
-        <div class="pb-14 sm:pb-20">
-            <div class="mx-20 xl:mx-60 h-28 flex flex-col xl:flex-row justify-between items-center">
+        <div class="pb-14 sm:pb-20 ease duration-300">
+            <div class="mx-20 xl:mx-60 h-28 flex flex-col xl:flex-row justify-between items-center ease duration-300">
                 <div class="w-1/6"></div>
-                <p class="w-full xl:w-2/3 text-center font-poppins text-sm sm:text-base md:text-xl text-gray/600">© 2023
+                <p
+                    class="w-full xl:w-2/3 text-center font-poppins text-sm sm:text-base md:text-xl text-gray/600 ease duration-300">
+                    © 2023
                     Quilio Ltd. |
                     Privacy |
                     Terms |
                     Sitemap</p>
                 <div class="w-[200px] flex gap-5 justify-center">
-                    <img class="w-5 md:w-fit object-contain" src="../assets/img/footer/socials/linkedin-logo.png"
-                        alt="socials">
-                    <img class="w-5 md:w-fit object-contain" src="../assets/img/footer/socials/linkedin-logo.png"
-                        alt="socials">
-                    <img class="w-5 md:w-fit object-contain" src="../assets/img/footer/socials/linkedin-logo.png"
-                        alt="socials">
+                    <img class="w-5 md:w-fit object-contain ease duration-300"
+                        src="../assets/img/footer/socials/linkedin-logo.png" alt="socials">
+                    <img class="w-5 md:w-fit object-contain ease duration-300"
+                        src="../assets/img/footer/socials/linkedin-logo.png" alt="socials">
+                    <img class="w-5 md:w-fit object-contain ease duration-300"
+                        src="../assets/img/footer/socials/linkedin-logo.png" alt="socials">
                 </div>
             </div>
         </div>
