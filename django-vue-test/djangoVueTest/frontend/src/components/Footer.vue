@@ -1,35 +1,77 @@
 <template>
+    <!-- ========================================================================================== -->
+    <!-- OUTER CONTAINER -->
+    <!-- ========================================================================================== -->
     <div ref="footerContainer" class="bg-surface/primary w-full">
-        <div class="pt-20 pb-24">
-            <div class="flex mx-60 gap-32">
-                <div class="">
-                    <img src="../assets/img/nav/logo/full-logo.svg" alt="quilio logo">
-                </div>
+        <!-- ========================================================================================== -->
+        <!-- ROW 1 OUER CONTAINER - Logo, Services, Company -->
+        <!-- ========================================================================================== -->
+        <div class="pt-14 sm:pt-20 pb-16 sm:pb-24 flex justify-center">
+            <!-- ========================================================================================== -->
+            <!-- ROW 1 INNER CONTAINER -->
+            <!-- ========================================================================================== -->
+            <div class="flex w-4/5 gap-8 sm:gap-16 md:gap-24 lg:gap-32">
+                <!-- ========================================================================================== -->
+                <!-- IMG CONTAINER -->
+                <!-- ========================================================================================== -->
+                <RouterLink to="/">
+                    <img class="w-16 sm:w-fit" src="../assets/img/nav/logo/full-logo.svg" alt="quilio logo">
+                </RouterLink>
+                <!-- ========================================================================================== -->
+                <!-- SERVICES CONTAINER -->
+                <!-- ========================================================================================== -->
                 <div class="flex flex-col gap-3">
-                    <h3 class="mb-1 font-avenir text-4xl font-medium text-gray/50">Services</h3>
-                    <a class="font-poppins text-xl font-light text-gray/50" href="">Bug Tracker</a>
-                    <a class="font-poppins text-xl font-light text-gray/50" href="">VST Development</a>
-                    <a class="font-poppins text-xl font-light text-gray/50" href="">Beta Testing</a>
+                    <h3
+                        class="mb-1 font-avenir text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray/50 cursor-default">
+                        Services</h3>
+                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50" href="">Bug
+                        Tracker</a>
+                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50" href="">VST
+                        Development</a>
+                    <a class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50" href="">Beta
+                        Testing</a>
                 </div>
+                <!-- ========================================================================================== -->
+                <!-- COMPANY CONTAINER -->
+                <!-- ========================================================================================== -->
                 <div class="flex flex-col gap-3">
-                    <h3 class="mb-1 font-avenir text-4xl font-medium text-gray/50">Company</h3>
-                    <a class="font-poppins text-xl font-light text-gray/50" href="">About Us</a>
-                    <a class="font-poppins text-xl font-light text-gray/50" href="">Contact Us</a>
+                    <h3
+                        class="mb-1 font-avenir text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray/50 cursor-default">
+                        Company</h3>
+                    <RouterLink to="/about-us"
+                        class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50">About Us
+                    </RouterLink>
+                    <RouterLink to="/contact-us"
+                        class="font-poppins text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray/50">
+                        Contact Us
+                    </RouterLink>
                 </div>
             </div>
         </div>
-        <div class="w-full h-full flex justify-center items-center">
-            <div ref="footerLine" class="w-4/5 mx-60 h-1 bg-surface/sunrise"></div>
+        <!-- ========================================================================================== -->
+        <!-- LINE DIVIDER CONTAINER -->
+        <!-- ========================================================================================== -->
+        <div class="h-full flex justify-center items-center">
+            <div ref="footerLine" class="w-4/5 h-1 bg-surface/sunrise"></div>
         </div>
-        <div class="pb-20">
-            <div class="mx-60 h-28 flex justify-between items-center">
+        <!-- ========================================================================================== -->
+        <!-- QUILIO STAMP -->
+        <!-- ========================================================================================== -->
+        <div class="pb-14 sm:pb-20">
+            <div class="mx-20 xl:mx-60 h-28 flex flex-col xl:flex-row justify-between items-center">
                 <div class="w-1/6"></div>
-                <p class="w-2/3 text-center font-poppins text-xl text-gray/600">© 2023 Quilio Ltd. | Privacy | Terms |
+                <p class="w-full xl:w-2/3 text-center font-poppins text-sm sm:text-base md:text-xl text-gray/600">© 2023
+                    Quilio Ltd. |
+                    Privacy |
+                    Terms |
                     Sitemap</p>
-                <div class="w-1/6 flex gap-5">
-                    <img src="../assets/img/footer/socials/linkedin-logo.png" alt="socials">
-                    <img src="../assets/img/footer/socials/linkedin-logo.png" alt="socials">
-                    <img src="../assets/img/footer/socials/linkedin-logo.png" alt="socials">
+                <div class="w-[200px] flex gap-5 justify-center">
+                    <img class="w-5 md:w-fit object-contain" src="../assets/img/footer/socials/linkedin-logo.png"
+                        alt="socials">
+                    <img class="w-5 md:w-fit object-contain" src="../assets/img/footer/socials/linkedin-logo.png"
+                        alt="socials">
+                    <img class="w-5 md:w-fit object-contain" src="../assets/img/footer/socials/linkedin-logo.png"
+                        alt="socials">
                 </div>
             </div>
         </div>
@@ -43,6 +85,8 @@ import gsap from 'gsap';
 import scrollTrigger from 'gsap/ScrollTrigger';
 //ref, onMounted imports
 import { ref, onMounted } from 'vue';
+//router link for page navigation
+import { RouterLink } from 'vue-router';
 //=======================================================
 gsap.registerPlugin(scrollTrigger);
 //=======================================================
