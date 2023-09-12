@@ -459,35 +459,132 @@
                     <!-- ========================================================================================== -->
                     <!-- OS STACKS -->
                     <!-- ========================================================================================== -->
-                    <div class="flex flex-row justify-center items-center gap-8 sm:gap-16 md:gap-24">
-                        <!-- ========================================================================================== -->
-                        <!-- OS CPP -->
-                        <!-- ========================================================================================== -->
-                        <div ref="cPP" class="w-1/4 my-8 flex flex-col justify-center items-center">
-                            <img class="w-14 sm:w-20 md:w-24 lg:w-36 mb-8 duration-300"
-                                src="../assets/img/homepage/tech-stack/c++.png" alt="c++ logo">
-                            <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
-                                C++
-                            </h3>
+                    <div id="os-stacks" class="flex flex-row flex-wrap justify-around items-center gap-16 px-16">
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/binary-code.png" alt="Image 1">
+                            <p class="text-gray/50 text-center">Binary</p>
                         </div>
-                        <!-- ========================================================================================== -->
-                        <!-- OS PYTHON -->
-                        <!-- ========================================================================================== -->
-                        <div ref="python" class="w-1/4 my-8 flex flex-col justify-center items-center">
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/coding-1.png"
+                                alt="Image 2">
+                            <p class="text-gray/50 text-center">Coding</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/coding-2.png"
+                                alt="Image 3">
+                            <p class="text-gray/50 text-center">Script</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/coding-3.png" alt="Image 4">
+                            <p class="text-gray/50 text-center">Algorithm</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/coding-4.png"
+                                alt="Image 5">
+                            <p class="text-gray/50 text-center">Syntax</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/coding.png" alt="Image 6">
+                            <p class="text-gray/50 text-center">Program</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-bullseye-48.png"
+                                alt="Image 7">
+                            <p class="text-gray/50 text-center">Target</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-christmas-tree-48.png"
+                                alt="Image 8">
+                            <p class="text-gray/50 text-center">Holiday</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-confetti-ball-48.png"
+                                alt="Image 9">
+                            <p class="text-gray/50 text-center">Celeb</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-crystal-ball-48.png"
+                                alt="Image 10">
+                            <p class="text-gray/50 text-center">Future</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-diamond-suit-48.png"
+                                alt="Image 11">
+                            <p class="text-gray/50 text-center">Gem</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-diving-mask-48.png"
+                                alt="Image 12">
+                            <p class="text-gray/50 text-center">Dive</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-firecracker-48.png"
+                                alt="Image 13">
+                            <p class="text-gray/50 text-center">Blast</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-fireworks-48.png"
+                                alt="Image 14">
+                            <p class="text-gray/50 text-center">Sparkle</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full"
+                                src="../assets/img/homepage/tech-stack/temp/icons8-flower-playing-cards-48.png"
+                                alt="Image 15">
+                            <p class="text-gray/50 text-center">Floral</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/otp.png" alt="Image16 ">
+                            <p class="text-gray/50 text-center "> OneTime </p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/programming-1.png"
+                                alt="Image 17">
+                            <p class="text-gray/50 text-center">Logic</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/programming.png" alt="Image 18">
+                            <p class="text-gray/50 text-center">Code</p>
+                        </div>
+
+                        <div class="grid gap-4 w-1/12">
+                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/serialization.png"
+                                alt="Image 19">
+                            <p class="text-gray/50 text-center text-base">Serialize</p>
+                        </div>
+
+                        <!-- OLD STACK ITEMS -->
+                        <!-- <div ref="python" class="w-1/4 my-8 flex flex-col justify-center items-center">
                             <img class="w-16 sm:w-24 md:w-28 lg:w-40 mb-8 duration-300"
                                 src="../assets/img/homepage/tech-stack/python.png" alt="python logo">
                             <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
                                 Python</h3>
                         </div>
-                        <!-- ========================================================================================== -->
-                        <!-- OS JAVSCRIPT -->
-                        <!-- ========================================================================================== -->
+
                         <div ref="javaScript" class="w-1/4 my-8 flex flex-col justify-center items-center">
                             <img class="w-16 sm:w-24 md:w-28 lg:w-40 mb-8 ease duration-300"
                                 src="../assets/img/homepage/tech-stack/javascript.png" alt="javascript logo">
                             <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
                                 JavaScript</h3>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
