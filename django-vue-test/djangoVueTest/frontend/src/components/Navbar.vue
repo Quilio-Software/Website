@@ -1,79 +1,154 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 
+//Vue imports
+import { ref, onMounted } from 'vue';
+//GSAP imports
+import gsap from 'gsap';
+import scrollTrigger from 'gsap/ScrollTrigger';
+
+//register gsap scrolltrigger plugin
+gsap.registerPlugin(scrollTrigger);
+
+//VARS
+const navOuter = ref(null);
+const deals = ref(null);
+
+onMounted(() => {
+
+    //stores animation, initially set to null to make sure nav is displayed on page load
+    let navAnimateIn = null;
+
+    //ScrollTrigger - checks when navOuter (main nav) hits the top of the screen
+    scrollTrigger.create({
+        trigger: navOuter.value,
+        start: 'top top',
+        onEnter: () => {
+            //check if element has mounted
+            if (navOuter.value) {
+                navOuter.value.classList.add('fixed');
+                //update animation on scrollTrigger
+                navAnimateIn = gsap.fromTo(navOuter.value, {
+                    opacity: 0,
+                }, {
+                    opacity: 1,
+                    ease: 'Power2.easeInOut',
+                });
+            }
+        },
+        animation: navAnimateIn,
+    });
+
+    //ScrollTrigger - checks when bottom of deals tab hits the top of the screen
+    scrollTrigger.create({
+        trigger: deals.value,
+        start: 'bottom top',
+        onEnterBack: () => {
+            if (navOuter.value) {
+                navOuter.value.classList.remove('fixed');
+            }
+        }
+    });
+});
+
 
 </script>
 
 <template>
-    <!-- NAV -->
-    <nav class="fixed top-0 left-0 w-full h-fit z-50">
-        <div class="nav-main h-24 flex flex-row justify-around items-center bg-gray/900">
-            <!-- LOGO -->
-            <RouterLink to="/"
-                class="logo-container w-14 sm:w-20 md:w-24 h-8 flex justify-center items-center ease duration-300">
-                <!-- Need to fill with LOGO -->
-                <img class="-translate-y-[1px] sm:-translate-y-[3px] md:-translate-y-[4px]"
-                    src="../assets/img/nav/logo/full-logo.svg" alt="Quillio logo">
-            </RouterLink>
-            <!-- NAV BUTTONS -->
-            <ul class="nav-buttons flex flex-row justify-around gap-6 sm:gap-8 md:gap-10 lg:gap-16 ease duration-300">
+    <div class="absolute top-0 left-0 w-full">
+        <!-- DEALS CONTAINER -->
+        <div ref="deals" class="h-16 sm:h-24 flex items-center justify-center  bg-primary/400 ease duration-300">
+            <h3
+                class="text-center text-lg sm:text-2xl lg:text-3xl font-sans font-bold tracking-wide text-gray/50 ease duration-300">
+                New Deals: <span class="italic font-normal">40% </span><span class="font-light">off everything!</span></h3>
+        </div>
+        <!-- NAV OUTER -->
+        <nav ref="navOuter" class="top-0 left-0 w-full h-fit z-50">
+            <div class="nav-main h-24 flex flex-row justify-around items-center bg-gray/900">
+                <!-- LOGO -->
+                <RouterLink to="/"
+                    class="logo-container w-20 md:w-24 h-8 flex justify-center items-center ease duration-300">
+                    <!-- Need to fill with LOGO -->
+                    <img class="-translate-y-[1px] sm:-translate-y-[3px] md:-translate-y-[4px]"
+                        src="../assets/img/nav/logo/full-logo.svg" alt="Quillio logo">
+                </RouterLink>
+                <!-- NAV BUTTONS -->
+                <ul class="nav-buttons flex flex-row justify-around gap-6 sm:gap-8 md:gap-10 lg:gap-16 ease duration-300">
+                    <li>
+                        <RouterLink to="/products/deals"
+                            class="hidden sm:inline text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
+                            aria-current="page">
+                            Products
+                        </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/about-us"
+                            class="hidden sm:inline text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
+                            aria-current="page">
+                            About Us
+                        </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/contact-us"
+                            class="hidden sm:inline text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300">
+                            Contact Us
+                        </RouterLink>
+                    </li>
+                </ul>
+
+
+
+                <div class="flex gap-8 items-center">
+                    <!-- USERs BASKET OUTER -->
+                    <div class="w-28 sm:w-32 md:w-36 h-10 md:h-12 rounded bg-surface/primary">
+                        <!-- USERs BASKET INNER -->
+                        <div class="h-full mx-1 flex flex-row justify-around items-center">
+                            <!-- SHOPPING BASKET IMG -->
+                            <img class="w-5 sm:w-fit" src="../assets/img/nav/basket/shopping.svg" alt="basket icon">
+                            <!-- BASKET AMONUT ICON -->
+                            <div
+                                class="w-5 sm:w-6 h-5 sm:h-6 text-sm sm:text-base flex justify-center items-center rounded-full bg-[#352d3c] text-gray/50">
+                                1
+                            </div>
+                            <!-- LINE SPLITTER -->
+                            <div class="w-0.5 h-5 sm:h-6 rounded bg-gray/50"></div>
+                            <!-- ACCOUNT ICON -->
+                            <img class="w-fit" src="../assets/img/nav/account/user-circle.svg" alt="account icon">
+                        </div>
+                    </div>
+
+                    <!-- BURGER -->
+                    <div class="flex sm:hidden flex-col gap-2">
+                        <div class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                        <div class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                        <div class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            <ul v-if="$route.path.startsWith('/products')"
+                class="sub-nav h-16 flex flex-row justify-center items-center bg-surface/primary">
                 <li>
                     <RouterLink to="/products/deals"
-                        class="text-base sm:text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
+                        class="text-lg sm:text-xl text-center font-poppins font-thin tracking-wide text-primary/400 ease duration-300"
                         aria-current="page">
-                        Products
+                        Deals
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/about-us"
-                        class="flex-row gap-2 text-base sm:text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
+                    <RouterLink to="/products/free"
+                        class="mx-10 sm:mx-20 text-lg sm:text-xl text-center font-poppins font-thin tracking-wide text-primary/400 ease duration-300"
                         aria-current="page">
-                        About <p class="hidden sm:inline ease duration-300">Us</p>
+                        Free
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/contact-us"
-                        class="flex-row gap-2 text-base sm:text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300">
-                        Contact <p class="hidden sm:inline ease duration-300">Us</p>
+                    <RouterLink to="/products/new"
+                        class="text-lg sm:text-xl text-center font-poppins font-thin tracking-wide text-primary/400 ease duration-300"
+                        aria-current="page">
+                        New
                     </RouterLink>
                 </li>
             </ul>
-            <!-- USERs BASKET -->
-            <div class="basketAndAccount-container w-14 sm:w-32 md:w-36 h-8 sm:h-10 md:h-12 rounded bg-surface/primary">
-                <div class="basketAndAccount-inner-container h-full mx-1 flex flex-row justify-around items-center">
-                    <img class="hidden sm:inline w-fit" src="../assets/img/nav/basket/shopping.svg" alt="basket icon">
-                    <div
-                        class="w-4 sm:w-6 h-4 sm:h-6 text-sm sm:text-base flex justify-center items-center rounded-full bg-[#352d3c] text-gray/50">
-                        1
-                    </div>
-                    <div class="hidden sm:inline w-0.5 h-5 sm:h-6 rounded bg-gray/50"></div>
-                    <img class="w-5 sm:w-fit" src="../assets/img/nav/account/user-circle.svg" alt="account icon">
-                </div>
-            </div>
-        </div>
-        <ul v-if="$route.path.startsWith('/products')"
-            class="sub-nav h-16 flex flex-row justify-center items-center bg-surface/primary">
-            <li>
-                <RouterLink to="/products/deals"
-                    class="text-lg sm:text-xl text-center font-poppins font-thin tracking-wide text-primary/400 ease duration-300"
-                    aria-current="page">
-                    Deals
-                </RouterLink>
-            </li>
-            <li>
-                <RouterLink to="/products/free"
-                    class="mx-10 sm:mx-20 text-lg sm:text-xl text-center font-poppins font-thin tracking-wide text-primary/400 ease duration-300"
-                    aria-current="page">
-                    Free
-                </RouterLink>
-            </li>
-            <li>
-                <RouterLink to="/products/new"
-                    class="text-lg sm:text-xl text-center font-poppins font-thin tracking-wide text-primary/400 ease duration-300"
-                    aria-current="page">
-                    New
-                </RouterLink>
-            </li>
-        </ul>
-    </nav>
+        </nav>
+    </div>
 </template>
