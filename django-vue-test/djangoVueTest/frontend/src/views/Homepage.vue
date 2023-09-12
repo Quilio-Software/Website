@@ -34,10 +34,6 @@
                     solutions
                     made by engineers, for artists</h5>
             </div>
-            <!-- OLD IMAGE - delete (ref="heroBg") -->
-            <!-- <img ref="heroBg"
-                class="absolute h-full min-w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-2/4 object-cover opacity-70"
-                src="../assets/img/banner.png" alt="hero section banner image"> -->
         </section>
 
         <!-- ========================================================================================== -->
@@ -60,10 +56,6 @@
             <!-- ========================================================================================== -->
             <div ref="s1Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
-                <!-- OLD IMAGE - delete (ref="s1Img") -->
-                <!-- <img ref="s1Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
-                        src="../assets/img/homepage/services/service-1.png" alt="audio signal processing and plugins image"> -->
-
                 <!-- ========================================================================================== -->
                 <!-- S1 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
@@ -72,14 +64,14 @@
                     <!-- ========================================================================================== -->
                     <!-- S1 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
-                    <h5 class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                    <h3 ref="s1Title" class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
                         Audio
                         Signal
                         Processing and
-                        Plugins</h5>
+                        Plugins</h3>
                     <!-- line - animate -->
-                    <div class="h-1 w-60 bg-primary/400 rounded-full"></div>
-                    <p
+                    <div ref="s1Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <p ref="s1Text"
                         class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
                         In
                         the world of
@@ -90,7 +82,7 @@
                     <!-- ========================================================================================== -->
                     <!-- S1 POINTER COLUMNS CONTAINER -->
                     <!-- ========================================================================================== -->
-                    <div class="flex mt-2">
+                    <div ref="s1PointerCols" class="flex mt-2">
                         <!-- ========================================================================================== -->
                         <!-- S1 COLUMN 1 -->
                         <!-- ========================================================================================== -->
@@ -180,11 +172,7 @@
             <!-- ========================================================================================== -->
             <!-- S2 CARD OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div ref="s1Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
-
-                <!-- OLD IMAGE - delete (ref="s2Img") -->
-                <!-- <img ref="s2Img" class="absolute top-1/2 -translate-y-1/2 left-0 object-contain"
-                        src="../assets/img/homepage/services/service-2.png" alt="an image of a brain"> -->
+            <div ref="s2Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
                 <!-- ========================================================================================== -->
                 <!-- S2 CARD INNER CONTAINER -->
@@ -192,27 +180,27 @@
                 <div ref="s2Inner"
                     class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
                     <!-- ========================================================================================== -->
-                    <!-- CARD TITLE & ABOUT TEXT -->
+                    <!-- S2 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
-                    <h5 class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
-                        Neuro-Engineering Solutions</h5>
+                    <h3 ref="s2Title" class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                        Neuro-Engineering Solutions</h3>
                     <!-- line - animate -->
-                    <div class="h-1 w-60 bg-primary/400 rounded-full"></div>
-                    <p
+                    <div ref="s2Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <p ref="s2Text"
                         class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
                         Scientists have been trying to unlock the secrets of the brain for generations. We’re not
                         saying
                         we’ve succeeded - but we’re pretty close, and our solutions reflect that.</p>
                     <!-- ========================================================================================== -->
-                    <!-- POINTER ROWS CONTAINER -->
+                    <!-- S2 POINTER ROWS CONTAINER -->
                     <!-- ========================================================================================== -->
-                    <div class="flex flex-col gap-9">
+                    <div ref="s2PointerCols" class="flex flex-col gap-9">
                         <!-- ========================================================================================== -->
-                        <!-- ROW 1 -->
+                        <!-- S2 ROW 1 -->
                         <!-- ========================================================================================== -->
                         <div class="flex gap-6 sm:gap-10 md:gap-24 lg:gap-32">
                             <!-- ========================================================================================== -->
-                            <!-- POINTER CONTAINER -->
+                            <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
@@ -224,7 +212,7 @@
                                 </p>
                             </div>
                             <!-- ========================================================================================== -->
-                            <!-- POINTER CONTAINER -->
+                            <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
@@ -238,11 +226,11 @@
                             <!-- ========================================================================================== -->
                         </div>
                         <!-- ========================================================================================== -->
-                        <!-- ROW 2 -->
+                        <!-- S2 ROW 2 -->
                         <!-- ========================================================================================== -->
                         <div>
                             <!-- ========================================================================================== -->
-                            <!-- POINTER CONTAINER -->
+                            <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
@@ -263,10 +251,6 @@
             <!-- ========================================================================================== -->
             <div ref="s3Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
-                <!-- OLD IMAGE - delete (ref="s3Img") -->
-                <!-- <img ref="s3Img" class="absolute top-1/2 -translate-y-1/2 right-0 object-contain"
-                        src="../assets/img/homepage/services/service-3.png" alt="custom ai solutions image"> -->
-
                 <!-- ========================================================================================== -->
                 <!-- S3 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
@@ -275,18 +259,18 @@
                     <!-- ========================================================================================== -->
                     <!-- S3 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
-                    <h5 class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
-                        Custom AI Solutions</h5>
+                    <h3 ref="s3Title" class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                        Custom AI Solutions</h3>
                     <!-- line - animate -->
-                    <div class="h-1 w-60 bg-primary/400 rounded-full"></div>
-                    <p
+                    <div ref="s3Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <p ref="s3Text"
                         class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
                         AI is both the Holy Grail of the Internet and the sign of End Times. We see it exactly as it is
                         though - a tool to make our lives, and by extension, your lives easier. </p>
                     <!-- ========================================================================================== -->
                     <!-- S3 POINTER COLUMNS CONTAINER -->
                     <!-- ========================================================================================== -->
-                    <div class="flex mt-2">
+                    <div ref="s3PointerCols" class="flex mt-2">
                         <!-- ========================================================================================== -->
                         <!-- S3 COLUMN 1 -->
                         <!-- ========================================================================================== -->
@@ -598,7 +582,6 @@ const animationsTimeline = gsap.timeline;
 
 //HERO SECTION elements//================================
 const heroTitleContainer = ref(null);
-const heroBg = ref(null);
 //=======================================================
 
 //WHAT WE DO SECTION//===================================
@@ -611,18 +594,26 @@ const services = ref(null);//container
 //SERVICE 1 (Audio Signal Processing and Plugins)
 const s1Outer = ref(null);
 const s1Inner = ref(null);
-// delete
-const s1Img = ref(null);
+const s1Title = ref(null);
+const s1Line = ref(null);
+const s1Text = ref(null);
+const s1PointerCols = ref(null);
 
 //SERVICE 2 (Neuro Engineering Solutions)
-const s2 = ref(null);
-const s2Img = ref(null);
-const s2Card = ref(null);
+const s2Outer = ref(null);
+const s2Inner = ref(null);
+const s2Title = ref(null);
+const s2Line = ref(null);
+const s2Text = ref(null);
+const s2PointerCols = ref(null);
 
-//SERVICE 3 ()
-const s3 = ref(null);
-const s3Img = ref(null);
-const s3Card = ref(null);
+//SERVICE 3 (Custom AI Solutions)
+const s3Outer = ref(null);
+const s3Inner = ref(null);
+const s3Title = ref(null);
+const s3Line = ref(null);
+const s3Text = ref(null);
+const s3PointerCols = ref(null);
 //=======================================================
 
 //TESTIMONIALS ==========================================
@@ -656,17 +647,16 @@ const contactUsAbout2 = ref(null);
 
 //========================================================================================================================
 //================================================= PAGE ANIMATIONS ======================================================
-/* 
-onMounted(() => {
+
+/* onMounted(() => {
     //================= HERO SECTION =========================
     //HERO on page load animation
-    animations.from(heroTitleContainer.value.children, {
+    console.log(heroTitleContainer.value);
+
+    animations.from(heroTitleContainer.value, {
+        opacity: 0,
+        duration: 1,
         delay: 0.5,
-        duration: 2,
-        y: '+100',
-        stagger: 1,
-        autoAlpha: 0,
-        ease: 'back.out(1.7)',
     });
     //HERO background img onscroll animation
     animations.to(heroBg.value, {
