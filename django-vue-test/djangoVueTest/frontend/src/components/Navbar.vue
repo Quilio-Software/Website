@@ -10,14 +10,24 @@ import scrollTrigger from 'gsap/ScrollTrigger';
 //register gsap scrolltrigger plugin
 gsap.registerPlugin(scrollTrigger);
 
-//VARS
+//Main Nav Variables
 const navOuter = ref(null);
 const deals = ref(null);
+
+//Burger Variables
+const burgerContainer = ref(null);
+const line1 = ref(null);
+const line2 = ref(null);
+const line3 = ref(null);
+
+//SideBar
+const sideNav = ref(null);
 
 onMounted(() => {
 
     //stores animation, initially set to null to make sure nav is displayed on page load
     let navAnimateIn = null;
+    let sideNavAnimateIn = null;
 
     //ScrollTrigger - checks when navOuter (main nav) hits the top of the screen
     scrollTrigger.create({
@@ -27,12 +37,29 @@ onMounted(() => {
             //check if element has mounted
             if (navOuter.value) {
                 navOuter.value.classList.add('fixed');
+
+                //side nav classes
+                sideNav.value.classList.add('fixed');
+                sideNav.value.classList.remove('absolute');
+                sideNav.value.classList.remove('h-5/6');
+                sideNav.value.classList.add('h-full');
+
                 //update animation on scrollTrigger
                 navAnimateIn = gsap.fromTo(navOuter.value, {
                     opacity: 0,
                 }, {
                     opacity: 1,
+                    duration: 0.3,
                     ease: 'Power2.easeInOut',
+                });
+
+                sideNavAnimateIn = gsap.fromTo(sideNav.value, {
+                    opacity: 0,
+                }, {
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: 'Power2.easeInOut',
+                    delay: 0.1,
                 });
             }
         },
@@ -46,16 +73,81 @@ onMounted(() => {
         onEnterBack: () => {
             if (navOuter.value) {
                 navOuter.value.classList.remove('fixed');
+
+                sideNav.value.classList.remove('fixed');
+                sideNav.value.classList.add('absolute');
+                sideNav.value.classList.add('h-5/6');
+                sideNav.value.classList.remove('h-full');
             }
         }
     });
+
+    //===========================================================================
+    //BURGER LINE ANIMATIONS
+    const line2Animate =
+        gsap.to(line2.value, {
+            opacity: 0,
+            duration: 0.3,
+            ease: 'Power2.easeIn',
+            paused: true,
+        }).reverse();
+
+    const line1Animate =
+        gsap.to(line1.value, {
+            rotate: '45deg',
+            translateY: '10px',
+            duration: 0.3,
+            ease: 'Power2.easeIn',
+            paused: true,
+        }).reverse();
+
+    const line3Animate =
+        gsap.to(line3.value, {
+            rotate: '-45deg',
+            translateY: '-10px',
+            duration: 0.3,
+            ease: 'Power2.easeIn',
+            paused: true,
+        }).reverse();
+
+    //SIDE NAV ANIMATION
+    const sideNavAnimate =
+        gsap.from(sideNav.value, {
+            translateX: '100%',
+            opacity: 0,
+            duration: 0.3,
+            ease: 'Power2.easeIn',
+            paused: true,
+        }).reverse();
+
+    //===========================================================================
+    //BURGER TRIG FUNCTION
+    const toggleBurger = () => {
+
+        if (line1.value && line2.value && line3.value) {
+            //line 2 - middle dissappears
+            line2Animate.reversed() ? line2Animate.play() : line2Animate.reverse();
+            //line 1 - rotate
+            line1Animate.reversed() ? line1Animate.play() : line1Animate.reverse();
+            //line 3 - rotate
+            line3Animate.reversed() ? line3Animate.play() : line3Animate.reverse();
+            //side nav
+            sideNavAnimate.reversed() ? sideNavAnimate.play() : sideNavAnimate.reverse();
+        }
+    }
+
+    //===========================================================================
+    //BURGER EVENT LISTENER
+    if (burgerContainer.value) {
+        burgerContainer.value.addEventListener('click', toggleBurger);
+    }
 });
 
 
 </script>
 
 <template>
-    <div class="absolute top-0 left-0 w-full">
+    <div class="absolute top-0 left-0 w-full h-full z-10">
         <!-- DEALS CONTAINER -->
         <div ref="deals" class="h-16 sm:h-24 flex items-center justify-center  bg-primary/400 ease duration-300">
             <h3
@@ -97,11 +189,12 @@ onMounted(() => {
                 </ul>
 
 
-
+                <!-- USER PROFILE and BURGER -->
                 <div class="flex gap-8 items-center">
-                    <!-- USERs BASKET OUTER -->
+
+                    <!-- USER OUTER -->
                     <div class="w-28 sm:w-32 md:w-36 h-10 md:h-12 rounded bg-surface/primary">
-                        <!-- USERs BASKET INNER -->
+                        <!-- USER INNER -->
                         <div class="h-full mx-1 flex flex-row justify-around items-center">
                             <!-- SHOPPING BASKET IMG -->
                             <img class="w-5 sm:w-fit" src="../assets/img/nav/basket/shopping.svg" alt="basket icon">
@@ -118,10 +211,10 @@ onMounted(() => {
                     </div>
 
                     <!-- BURGER -->
-                    <div class="flex sm:hidden flex-col gap-2">
-                        <div class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
-                        <div class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
-                        <div class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                    <div ref="burgerContainer" class="flex sm:hidden flex-col gap-2">
+                        <div ref="line1" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                        <div ref="line2" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                        <div ref="line3" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
                     </div>
                 </div>
             </div>
@@ -150,5 +243,28 @@ onMounted(() => {
                 </li>
             </ul>
         </nav>
+
+        <!-- SideNav -->
+        <div ref="sideNav" class="absolute right-0 h-5/6 w-2/5 bg-gray/900">
+            <div class="ml-10 h-full flex flex-col justify-around">
+                <!-- PRODUCTS -->
+                <RouterLink to="/products/deals"
+                    class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
+                    Products
+                </RouterLink>
+
+                <!-- ABOUT US -->
+                <RouterLink to="/about-us"
+                    class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
+                    About Us
+                </RouterLink>
+
+                <!-- CONTACT US -->
+                <RouterLink to="/contact-us"
+                    class="pb-20 text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
+                    Contact Us
+                </RouterLink>
+            </div>
+        </div>
     </div>
 </template>
