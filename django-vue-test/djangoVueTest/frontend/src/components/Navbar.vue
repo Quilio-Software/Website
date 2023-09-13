@@ -53,14 +53,14 @@ onMounted(() => {
                     ease: 'Power2.easeInOut',
                 });
 
-                sideNavAnimateIn = gsap.fromTo(sideNav.value, {
-                    opacity: 0,
-                }, {
-                    opacity: 1,
-                    duration: 0.3,
-                    ease: 'Power2.easeInOut',
-                    delay: 0.1,
-                });
+                sideNavAnimateIn =
+                    gsap.from(sideNav.value, {
+                        opacity: 0,
+                        height: '0%',
+                        duration: 0.5,
+                        ease: 'Power2.easeInOut',
+                        delay: 0.1,
+                    });
             }
         },
         animation: navAnimateIn,
@@ -193,7 +193,7 @@ onMounted(() => {
                 <div class="flex gap-8 items-center">
 
                     <!-- USER OUTER -->
-                    <div class="w-28 sm:w-32 md:w-36 h-10 md:h-12 rounded bg-surface/primary">
+                    <div class="w-28 sm:w-32 md:w-36 h-10 md:h-12 rounded bg-surface/primary cursor-pointer">
                         <!-- USER INNER -->
                         <div class="h-full mx-1 flex flex-row justify-around items-center">
                             <!-- SHOPPING BASKET IMG -->
@@ -211,7 +211,7 @@ onMounted(() => {
                     </div>
 
                     <!-- BURGER -->
-                    <div ref="burgerContainer" class="flex sm:hidden flex-col gap-2">
+                    <div ref="burgerContainer" class="flex sm:hidden flex-col gap-2 cursor-pointer">
                         <div ref="line1" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
                         <div ref="line2" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
                         <div ref="line3" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
@@ -245,25 +245,43 @@ onMounted(() => {
         </nav>
 
         <!-- SideNav -->
-        <div ref="sideNav" class="absolute right-0 h-5/6 w-2/5 bg-gray/900">
-            <div class="ml-10 h-full flex flex-col justify-around">
-                <!-- PRODUCTS -->
-                <RouterLink to="/products/deals"
-                    class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
-                    Products
-                </RouterLink>
+        <div ref="sideNav" class="absolute right-0 h-5/6 w-2/5 bg-gray/900 bg-opacity-95">
+            <div class="ml-10 h-full flex flex-col gap-10">
 
-                <!-- ABOUT US -->
-                <RouterLink to="/about-us"
-                    class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
-                    About Us
-                </RouterLink>
+                <!-- LINKS -->
+                <div class="mt-8 h-2/5 flex flex-col justify-around">
+                    <!-- PRODUCTS -->
+                    <RouterLink to="/products/deals"
+                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
+                        Products
+                    </RouterLink>
 
-                <!-- CONTACT US -->
-                <RouterLink to="/contact-us"
-                    class="pb-20 text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
-                    Contact Us
-                </RouterLink>
+                    <!-- ABOUT US -->
+                    <RouterLink to="/about-us"
+                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
+                        About Us
+                    </RouterLink>
+
+                    <!-- CONTACT US -->
+                    <RouterLink to="/contact-us"
+                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
+                        Contact Us
+                    </RouterLink>
+                </div>
+
+                <!-- DIVIDER -->
+                <div class="h-[1px] w-3/5 rounded-full bg-gray/600"></div>
+
+                <!-- FOOTER -->
+                <p class=" w-full xl:w-2/3 font-poppins text-sm text-gray/600">
+                    © 2023
+                    Quilio Ltd.</p>
+
+                <!-- SOCIALS -->
+                <div class="flex gap-4">
+                    <img class="w-6" src="../assets/img/footer/socials/linkedin-logo.png" alt="">
+                    <img class="w-6" src="../assets/img/footer/socials/linkedin-logo.png" alt="">
+                </div>
             </div>
         </div>
     </div>
