@@ -53,24 +53,16 @@ onMounted(() => {
                     ease: 'Power2.easeInOut',
                 });
 
-                //SIDE NAV ORIGINAL ANIMATION
-                /* sideNavAnimateIn =
-                    gsap.from(sideNav.value, {
-                        opacity: 0,
-                        height: '0%',
-                        duration: 0.5,
-                        ease: 'Power2.easeInOut',
-                        delay: 0.1,
-                    }); */
-
                 //SIDE NAV FULL WIDTH TEST ANIMATION
                 sideNavAnimateIn =
                     gsap.fromTo(sideNav.value, {
                         opacity: 0,
                         height: 0,
+                        translateY: 0
                     }, {
                         opacity: 1,
                         height: 'fit-content',
+                        translateY: '10px',
                         duration: 0.5,
                         ease: 'Power2.easeInOut',
                         delay: 0.1,
@@ -92,6 +84,13 @@ onMounted(() => {
                 sideNav.value.classList.add('absolute');
                 sideNav.value.classList.add('h-5/6');
                 sideNav.value.classList.remove('h-full');
+
+                gsap.fromTo(sideNav.value, {
+                    translateY: '10px',
+                }, {
+                    translateY: 0,
+                    duration: 0,
+                });
             }
         }
     });
@@ -259,9 +258,9 @@ onMounted(() => {
         </nav>
 
         <!-- SideNav FULL WIDTH TEST -->
-        <div ref="sideNav" class="absolute sm:hidden right-0 w-full bg-gray/900 bg-opacity-90">
+        <div ref="sideNav" class="absolute sm:hidden right-0 w-full bg-gray/900 bg-opacity-95">
 
-            <div class="ml-10 my-10 flex flex-col gap-10">
+            <div class="ml-[9vw] my-10 flex flex-col gap-10">
 
                 <!-- LINKS -->
                 <div class="flex flex-col gap-10">
@@ -303,48 +302,5 @@ onMounted(() => {
 
             </div>
         </div>
-
-        <!-- 
-        <!~~ SideNav ORIGINAL ~~>
-        <div ref="sideNav" class="absolute sm:hidden right-0 h-5/6 w-2/5 bg-gray/900 bg-opacity-95">
-            <div class="ml-10 h-full flex flex-col gap-10">
-
-                <!~~ LINKS ~~>
-                <div class="mt-8 h-2/5 flex flex-col justify-around">
-                    <!~~ PRODUCTS ~~>
-                    <RouterLink to="/products/deals"
-                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
-                        Products
-                    </RouterLink>
-
-                    <!~~ ABOUT US ~~>
-                    <RouterLink to="/about-us"
-                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
-                        About Us
-                    </RouterLink>
-
-                    <!~~ CONTACT US ~~>
-                    <RouterLink to="/contact-us"
-                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:underline ease duration-300">
-                        Contact Us
-                    </RouterLink>
-                </div>
-
-                <!~~ DIVIDER ~~>
-                <div class="h-[1px] w-3/5 rounded-full bg-gray/600"></div>
-
-                <!~~ FOOTER ~~>
-                <p class=" w-full xl:w-2/3 font-poppins text-sm text-gray/600">
-                    © 2023
-                    Quilio Ltd.</p>
-
-                <!~~ SOCIALS ~~>
-                <div class="flex gap-4">
-                    <img class="w-6" src="../assets/img/footer/socials/linkedin-logo.png" alt="">
-                    <img class="w-6" src="../assets/img/footer/socials/linkedin-logo.png" alt="">
-                </div>
-            </div>
-        </div>
-         -->
     </div>
 </template>
