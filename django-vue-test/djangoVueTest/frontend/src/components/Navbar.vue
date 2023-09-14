@@ -160,7 +160,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="absolute top-0 left-0 w-full h-full z-10">
+    <div class="absolute top-0 left-0 w-full h-full z-10 overflow-hidden">
         <!-- DEALS CONTAINER -->
         <div ref="deals" class="h-16 sm:h-24 flex items-center justify-center  bg-primary/400 ease duration-300">
             <h3
