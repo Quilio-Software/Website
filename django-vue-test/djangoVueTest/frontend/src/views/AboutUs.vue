@@ -1,56 +1,67 @@
 <template>
-    <div ref="container">
+    <div ref="container" class="">
         <!-- HERO -->
         <section ref="heroContainer"
-            class="relative w-full h-[680px] flex justify-center items-center bg-surface/secondary overflow-hidden">
+            class="relative w-full h-[80vh] flex justify-center items-center bg-surface/secondary overflow-hidden">
+            <!--  -->
+            <div
+                class="mt-32 absolute top-0 left-0 w-full h-full bg-gradient-to-t from-surface/secondary from-10% to-transparent to-90% z-10">
+            </div>
             <!-- BACKGROUND -->
             <img ref="heroBanner"
-                class="absolute h-full min-w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-2/4 object-cover opacity-70"
+                class="mt-32 absolute h-full min-w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-2/4 object-cover opacity-70"
                 src="../assets/img/banner.png" alt="hero section banner image">
             <!-- LOGO BIG -->
-            <img ref="heroLogo" class="z-10" src="../assets/img/aboutus/logo-big.svg" alt="quillio logo">
+            <div ref="heroLogo" class="mt-32 mx-20 sm:mx-32 z-10">
+                <img class="" src="../assets/img/aboutus/logo-big.svg" alt="quillio logo">
+            </div>
         </section>
 
         <!-- ABOUT US SECTION -->
         <section ref="aboutUsContainer" class="flex flex-col items-center bg-surface/secondary">
 
-            <div ref="aboutUsTitleContainer" class="mb-20 mt-24 flex flex-col gap-6 bg-gradient-2 bg-clip-text">
-                <h3 ref="aboutUsTitle1" class="text-center font-avenir font-medium text-6xl text-transparent">
+            <!-- TITLE CONTAINER -->
+            <div ref="aboutUsTitleContainer"
+                class="mb-20 mt-24 mx-10 sm:mx-20 flex flex-col gap-6 bg-gradient-2 bg-clip-text">
+                <!-- TITLE TOP -->
+                <h3 ref="aboutUsTitle1"
+                    class="text-center font-avenir font-medium text-3xl sm:text4xl md:text-5xl lg:text-6xl text-transparent">
                     We’re musicians.
                 </h3>
-                <h5 ref="aboutUsTitle2" class="text-center font-avenir font-medium text-6xl text-transparent">We’re
+                <!-- TITLE BOTTOM -->
+                <h5 ref="aboutUsTitle2"
+                    class="text-center font-avenir font-medium text-3xl sm:text4xl md:text-5xl lg:text-6xl text-transparent leading-[1.2]">
+                    We’re
                     engineers. We’re scientists.</h5>
             </div>
 
-            <div ref="aboutUsTextContainer" class="mb-48 mx-10 flex flex-col gap-10">
+            <div ref="aboutUsTextContainer" class="mb-48 mx-10 sm:mx-20 flex flex-col gap-4 sm:gap-8 md:gap-10 lg:gap-14">
                 <!-- mb-10 -->
                 <p ref="textElement"
-                    class="text-animation font-poppins text-2xl font-light tracking-wide text-center text-gray/50">
+                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
                     We’re a diverse,
                     multicultural and
                     multilingual team.
                 </p>
                 <p ref="textElement"
-                    class="text-animation font-poppins text-2xl font-light tracking-wide text-center text-gray/50">
+                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
                     Our backgrounds are
                     interdisciplinary, and so are the services we provide.
                 </p>
-                <div ref="aboutUsInnerContainer" class="">
-                    <p ref="textElement"
-                        class="text-animation font-poppins text-2xl font-light tracking-wide leading-10 text-center text-gray/50">
-                        It goes
-                        without saying
-                        that we deliver quality services.
-                    </p>
-                    <p ref="textElement"
-                        class="text-animation font-poppins text-2xl font-light tracking-wide leading-10 text-center text-gray/50">
-                        But we
-                        set ourselves apart through clear accountability and
-                        communication.
-                    </p>
-                </div>
                 <p ref="textElement"
-                    class="text-animation xl:mx-48 2xl:mx-60 font-poppins text-2xl font-light tracking-wide text-center text-gray/50 ease duration-300">
+                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
+                    It goes
+                    without saying
+                    that we deliver quality services.
+                </p>
+                <p ref="textElement"
+                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
+                    But we
+                    set ourselves apart through clear accountability and
+                    communication.
+                </p>
+                <p ref="textElement"
+                    class="text-animation leading-6 xl:mx-48 2xl:mx-60 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50 ease duration-300">
                     Our track record speaks for ourselves when it comes to meeting tight deadlines and confidentiality
                     requirements for your most ambitious projects.
                 </p>
@@ -58,40 +69,49 @@
         </section>
 
         <!-- CONTACT US SECTION -->
-        <section ref="contactUsContainer" class="">
+        <section ref="contactUsContainer" class="overflow-hidden">
             <div class="relative h-[1478px] bg-gradient-to-t from-black from-30% to-transparent to-100%">
 
                 <img ref="contactUsImg" class="absolute top-0 left-0 -z-10 h-[1478px] object-cover"
                     src="../assets/img/aboutus/people.jpeg" alt="image of people stadning in a room">
 
-                <div class="absolute bottom-0 py-20 px-5 sm:px-10 md:px-32 lg:px-48 gap-20 flex">
-                    <div class="max-w-[50%]">
-                        <h3
-                            class="mb-8 font-avenir text-5xl font-medium leading-[4rem] bg-gradient-2 bg-clip-text text-transparent">
-                            Don’t
-                            see a tool you can add to your arsenal? Let us
-                            know what we can build for you.
+                <div
+                    class="absolute bottom-0 max-w-full pb-20 px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-48 gap-8 sm:gap-20 md:gap-14 lg:gap-20 flex flex-col md:flex-row ease duration-300">
+                    <!-- ========================================================================================== -->
+                    <!-- INNER CONTAINER -->
+                    <!-- ========================================================================================== -->
+                    <div class="w-fit">
+                        <!-- ========================================================================================== -->
+                        <!-- TITLE -->
+                        <!-- ========================================================================================== -->
+                        <h3 ref="contactUsTitle"
+                            class="text-4xl sm:text-5xl md:text-4xl lg:text-5xl mb-8 font-avenir font-medium leading-[1.4] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.4] 2xl:leading-[1.4] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent ease duration-300">
+                            We believe the best clients are those you form deep relationships with.
                         </h3>
-                        <div ref="contactUsLine" class="mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
+                        <!-- ========================================================================================== -->
+                        <!-- LINE -->
+                        <!-- ========================================================================================== -->
+                        <div ref="contactUsLine" class="mb-16 xl:mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
+                        <!-- ========================================================================================== -->
+                        <!-- ABOUT -->
+                        <!-- ========================================================================================== -->
                         <div>
-                            <p ref="contactUsAbout1" class="mb-10 font-poppins text-2xl font-normal leading-9 text-gray/50">
-                                We aim to please. We
-                                go
-                                above
-                                and
-                                beyond
-                                to ensure
-                                that you have the right tools at the right time for your musical creativity and production
-                                needs.
+                            <p ref="contactUsAbout1"
+                                class="mb-10 font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                                We
+                                aim to please. We go above and beyond to ensure that you gain enough value to keep coming
+                                back
                             </p>
-                            <p ref="contactUsAbout2" class="font-poppins text-2xl font-normal leading-9 text-gray/50">
-                                Intrigued enough? Let’s have
-                                a
-                                conversation about
-                                your next big idea.</p>
+                            <p ref="contactUsAbout2"
+                                class="font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                                Intrigued
+                                enough? Let’s have a conversation about your next big idea.</p>
                         </div>
                     </div>
 
+                    <!-- ========================================================================================== -->
+                    <!-- EMAIL -->
+                    <!-- ========================================================================================== -->
                     <EmailForm />
                 </div>
             </div>
@@ -165,12 +185,12 @@ onMounted(() => {
 
     //hero logo concurrent animation
     animations.to(heroLogo.value, {
-        translateY: '150%',
+        translateY: '80%',
         opacity: 0,
         scrollTrigger: {
             trigger: heroContainer.value,
             start: 'top top',
-            end: 'bottom top',
+            end: 'center top',
             scrub: 2,
         },
     });
@@ -179,26 +199,23 @@ onMounted(() => {
     //================= ABOUT US =============================
 
     animations.fromTo(aboutUsTitleContainer.value, {
-        translateY: '100',
         gap: '60px',
         opacity: 0,
     }, {
-        translateY: '0',
         gap: '24px',
         opacity: 1,
 
-        delay: 0.5,
         duration: 0.5,
         ease: 'Power2.ease',
 
         scrollTrigger: {
             trigger: aboutUsContainer.value,
-            start: 'top center',
+            start: 'center bottom',
         }
     });
 
     animations.from(aboutUsTitleContainer.value, {
-        gap: '30px',
+        gap: '10px',
         scrollTrigger: {
             trigger: aboutUsContainer.value,
             start: 'top center',
@@ -210,19 +227,18 @@ onMounted(() => {
     textElements.value = Array.from(document.querySelectorAll('.text-animation'));
 
     textElements.value.forEach((element, index) => {
-        const translateX = index % 2 === 0 ? '50%' : '-50%';
+
+        /* const translateX = index % 2 === 0 ? '50%' : '-50%'; */
 
         animationsTimeline({
             scrollTrigger: {
                 trigger: aboutUsContainer.value,
-                start: 'bottom bottom',
+                start: 'center center',
             },
         }).fromTo(element, {
             opacity: 0,
-            translateX: translateX,
         }, {
             opacity: 1,
-            translateX: '0',
 
             duration: 0.5,
             ease: 'Power2.easeInOut',
@@ -231,11 +247,12 @@ onMounted(() => {
     });
 
     animations.from(aboutUsTextContainer.value, {
-        gap: '60px',
+        gap: '6',
+        opacity: 0,
         scrollTrigger: {
             trigger: aboutUsContainer.value,
             start: 'top center',
-            end: 'bottom top',
+            end: 'top top',
             scrub: 1,
         }
     });
@@ -269,7 +286,7 @@ onMounted(() => {
     animationsTimeline({
         scrollTrigger: {
             trigger: contactUsContainer.value,
-            start: 'bottom bottom',
+            start: 'center bottom',
         },
     }).fromTo(contactUsAbout1.value, {
         opacity: 0,
