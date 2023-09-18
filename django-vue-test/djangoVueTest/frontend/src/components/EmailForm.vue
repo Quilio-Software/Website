@@ -27,7 +27,7 @@
                         <!-- FORM INPUT -->
                         <!-- ========================================================================================== -->
                         <input placeholder="John Doe"
-                            class="h-8 sm:h-10 border-1 border-primary/400 bg-surface/secondary rounded-md ease duration-300"
+                            class="text-base h-8 sm:h-10 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
                             type="text" id="name" v-model="form.name" required>
                     </div>
 
@@ -46,7 +46,7 @@
                         <!-- FORM INPUT -->
                         <!-- ========================================================================================== -->
                         <input placeholder="johndoe@site.com"
-                            class="h-8 sm:h-10 border-1 border-primary/400 bg-surface/secondary rounded-md ease duration-300"
+                            class="text-base h-8 sm:h-10 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
                             type="email" id="email" v-model="form.email" required>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <!-- FORM INPUT -->
                     <!-- ========================================================================================== -->
                     <input placeholder="1234567890"
-                        class="h-8 sm:h-10 border-1 border-primary/400 bg-surface/secondary rounded-md duration-300"
+                        class="text-base h-8 sm:h-10 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
                         type="tel" id="phone" v-model="form.phone">
                 </div>
 
@@ -77,11 +77,11 @@
                     <!-- FORM INPUT -->
                     <!-- ========================================================================================== -->
                     <label
-                        class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 duration-300"
+                        class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 duration-100"
                         for="message">Message</label>
                     <textarea placeholder="Some text over here"
-                        class="h-28 border-1 border-primary/400 bg-surface/secondary rounded-md" id="message"
-                        v-model="form.message"></textarea>
+                        class="h-28 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md"
+                        id="message" v-model="form.message"></textarea>
                 </div>
 
                 <!-- ========================================================================================== -->
@@ -92,8 +92,9 @@
                     <!-- TERMS & CONDITIONS CONTAINER -->
                     <!-- ========================================================================================== -->
                     <div class="flex flex-col sm:flex-row gap-2 sm:items-center duration-300">
-                        <input class="w-5 h-5 border-1 border-primary/400 bg-surface/secondary rounded-md" type="checkbox"
-                            id="acceptTerms" v-model="form.accept_terms" required>
+                        <input
+                            class="w-5 h-5 border-1 hover:border-2 border-primary/400 focus: checked:bg-primary/400 focus:ring-primary/400 bg-surface/secondary rounded-md"
+                            type="checkbox" id="acceptTerms" v-model="form.accept_terms" required>
                         <label class="font-poppins text-sm sm:text-base font-light text-gray/50 duration-300"
                             for="acceptTerms">I agree
                             with <a class="text-secondary/700-main" href="...">terms</a></label>
