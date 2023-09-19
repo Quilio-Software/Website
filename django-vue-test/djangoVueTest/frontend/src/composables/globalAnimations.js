@@ -100,9 +100,9 @@ export function cardAnimation(outer, inner, title, line, text, pointerContainer)
         /* ============================================= */
         /* OUTER CONTAINER */
     }).fromTo(outer.value, {
-        autoAlpha: 0,
+        opacity: 0,
     }, {
-        autoAlpha: 1,
+        opacity: 1,
         duration: 0.5,
         ease: 'Power2.ease'
         /* ============================================= */
@@ -129,13 +129,15 @@ export function cardAnimation(outer, inner, title, line, text, pointerContainer)
     }).fromTo(inner.value, {
         backgroundColor: 'rgba(41, 31, 51, 0)',
         borderColor: 'rgba(241, 252, 231, 0)',
-        boxShadow: '0 0 0 rgba(0, 0, 0, 0)'
+        boxShadow: '0 0 0 rgba(0, 0, 0, 0)',
+        '--tw-shadow': '2px 10px 5px rgba(0, 0, 0, 0)',
+        '--tw-shadow-colored': '0px 0px 0px 0px',
     }, {
         backgroundColor: 'rgba(41, 31, 51, 0.25)',
         borderColor: 'rgba(241, 252, 231, 0.2)',
         boxShadow: '2px 10px 5px rgba(0, 0, 0, 0.25)',
         '--tw-shadow': '2px 10px 5px rgba(0, 0, 0, 0.25)',
-        '--tw-shadow-colored': '2px 10px 5px var(--tw-shadow-color)',
+        '--tw-shadow-colored': '2px 10px 5px 10px',
         duration: 0.3,
         ease: 'Power2.easeOut',
         delay: -0.3,

@@ -381,36 +381,36 @@
                         <!-- ========================================================================================== -->
                         <!-- TAB --><!-- -- ACTIVE -- -->
                         <!-- ========================================================================================== -->
-                        <div
-                            class="w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center bg-secondary/700-main/10 border-b-8 border-secondary/700-main ease duration-300">
+                        <div ref="logo"
+                            class="logo w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center bg-secondary/700-main/10 border-b-8 border-secondary/700-main ease duration-300">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
-                        <div
-                            class="w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                        <div ref="logo"
+                            class="logo w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
-                        <div
-                            class="w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                        <div ref="logo"
+                            class="logo w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
-                        <div
-                            class="w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                        <div ref="logo"
+                            class="logo w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
-                        <div
-                            class="w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                        <div ref="logo"
+                            class="logo w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
                             <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                     </div>
@@ -462,7 +462,8 @@
                     <!-- ========================================================================================== -->
                     <!-- OS STACKS -->
                     <!-- ========================================================================================== -->
-                    <div id="os-stacks" class="flex flex-row flex-wrap justify-around items-center gap-16 px-16">
+                    <div id="os-stacks" ref="ourStackItemContainer"
+                        class="flex flex-row flex-wrap justify-around items-center gap-16 px-16">
 
                         <div class="grid gap-4 w-1/12">
                             <img class="w-full" src="../assets/img/homepage/tech-stack/temp/binary-code.png" alt="Image 1">
@@ -732,6 +733,7 @@ const testimonialsPersona = ref(null);
 const ourStackOuter = ref(null);
 const ourStackInner = ref(null);
 const ourStackTitle = ref(null);
+const ourStackItemContainer = ref(null);
 //=======================================================
 
 //CONTACT US ============================================
@@ -837,157 +839,53 @@ onMounted(() => {
     testimonialsTimeline({
         scrollTrigger: {
             trigger: testimonialsOuter.value,
-            start: 'bottom bottom',
+            start: 'center bottom'
         }
-    }).fromTo(testimonialsOuter.value, {
+    }).fromTo(testimonialsLogos.value.children, {
+        translateX: -20,
         autoAlpha: 0,
     }, {
+        translateX: 0,
         autoAlpha: 1,
-        duration: 0.3,
-        ease: 'Power2.ease'
-    }).fromTo(testimonialsTitle.value, {
-        autoAlpha: 0,
-    }, {
-        autoAlpha: 1,
-        duration: 0.3,
-        ease: 'Power2.ease'
-    }).fromTo(testimonialsLogos.value, {
-        autoAlpha: 0,
-    }, {
-        autoAlpha: 1,
-        duration: 0.3,
-        ease: 'Power2.ease'
+        stagger: 0.2,
+        duration: 0.1,
     }).fromTo(testimonialsQuote.value, {
+        translateY: -60,
         autoAlpha: 0,
     }, {
+        translateY: 0,
         autoAlpha: 1,
-        duration: 0.3,
-        ease: 'Power2.ease'
-    }).fromTo(testimonialsPersona.value, {
-        autoAlpha: 0,
-    }, {
-        autoAlpha: 1,
-        duration: 0.3,
-        ease: 'Power2.ease'
+        duration: 0.8,
+        delay: 0.3,
+        ease: 'Power2.easeOut',
     });
-
-});
-
-/* onMounted(() => {
-    //================= HERO SECTION =========================
-    //HERO on page load animation
-    console.log(heroTitleContainer.value);
-
-    animations.from(heroTitleContainer.value, {
-        opacity: 0,
-        duration: 1,
-        delay: 0.5,
-    });
-    //HERO background img onscroll animation
-    animations.to(heroBg.value, {
-        y: '+30%',
-        scrollTrigger: {
-            trigger: heroBg.value,
-            start: 'top',
-            end: 'bottom',
-            scrub: 1,
-        },
-    });
-    //HERO title onscoll animation
-    animations.to(heroTitleContainer.value, {
-        translateY: '150%',
-        gap: '50px',
-        scrollTrigger: {
-            trigger: heroBg.value,
-            start: 'top',
-            end: 'bottom top',
-            scrub: 1,
-        },
-    });
-    //========================================================
-    //================= WHAT WE DO ===========================
-    //Title animation onEnter
-    animations.from(whatWeDoTitle.value, {
-        y: '-100%',
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: whatWeDoContainer.value,
-            start: 'top center',
-        },
-    });
-    animations.from(whatWeDoTitle.value, {
-        y: '-10%',
-        scrollTrigger: {
-            trigger: whatWeDoContainer.value,
-            start: 'top center',
-            end: 'bottom top',
-            scrub: 1,
-        },
-    })
-    //========================================================
-    //================= SERVICES =============================
-    serviceAnimation(s1, s1Img, s1Card);
-    serviceAnimation(s2, s2Img, s2Card);
-    serviceAnimation(s3, s3Img, s3Card);
-    //========================================================
-    //================= TESTIMONIALS =========================
-
-    //CHANGE: Y position + opacity - (on scroll)
-    animations.fromTo(testimonials.value, {
-        opacity: 0.5,
-        y: '-20%',
-    }, {
-        opacity: 1,
-        y: '0%',
-        scrollTrigger: {
-            trigger: testimonials.value,
-            start: 'top bottom',
-            end: 'center center',
-            scrub: 1,
-        }
-    });
-
-    //ANIMATE: testimonials inner elements
-    testimonialsAndTechStackAnimation(
-        testimonials,
-        testimonialsTitle,
-        testimonialsLogos,
-        testimonialsQuote,
-        testimonialsPersona);
 
     //========================================================
     //================= OUR STACK ============================
 
-    //CHANGE: Y position + opacity - (on scroll)
-    animations.fromTo(ourStackInner.value, {
-        opacity: 0.5,
-        y: '-20%',
-    }, {
-        opacity: 1,
-        y: '0%',
-        scrollTrigger: {
-            trigger: ourStackInner.value,
-            start: 'top bottom',
-            end: 'center center',
-            scrub: 1,
-        }
-    });
+    const ourStackTimeline = gsap.timeline;
 
-    //ANIMATE: ourStack inner elements
-    testimonialsAndTechStackAnimation(
-        ourStackInner,
-        ourStackTitle,
-        cPP,
-        python,
-        javaScript);
+    ourStackTimeline({
+        scrollTrigger: {
+            trigger: ourStackOuter.value,
+            start: 'center bottom'
+        }
+    }).fromTo(ourStackItemContainer.value.children, {
+        translateX: -20,
+        autoAlpha: 0,
+    }, {
+        translateX: 0,
+        autoAlpha: 1,
+        stagger: 0.04,
+    });
 
     //========================================================
-    //================= CONTACT US ===========================
+    //================= CONTACT US LINE ======================
 
-    //BACKGROUND GRADIENT - background position move Y (on scroll)
-    animations.from(contactUsTitle.value, {
-        backgroundPositionY: '-200%',
+    animations.fromTo(contactUsLine.value, {
+        width: '0%',
+    }, {
+        width: '80%',
         scrollTrigger: {
             trigger: contactUsContainer.value,
             start: 'top center',
@@ -996,36 +894,29 @@ onMounted(() => {
         },
     });
 
-    //PURPLE LINE - width change (on scroll)
-    animations.from(contactUsLine.value, {
-        width: '-200px',
+    gsap.timeline({
         scrollTrigger: {
             trigger: contactUsContainer.value,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: 5,
-        },
-    });
-
-    //CONTACT US - ABOUT US texts
-    animationsTimeline({
-        scrollTrigger: {
-            trigger: contactUsContainer.value,
-            start: 'bottom bottom',
+            start: 'center center',
         },
     }).fromTo(contactUsAbout1.value, {
-        opacity: 0,
+        translateX: -20,
+        autoAlpha: 0,
     }, {
-        opacity: 1,
-        ease: 'Power2.easeIn',
-        duration: 0.5,
+        translateX: 0,
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.easeOut',
     }).fromTo(contactUsAbout2.value, {
-        opacity: 0,
+        translateX: -20,
+        autoAlpha: 0,
     }, {
-        opacity: 1,
-        ease: 'Power2.easeIn',
-        duration: 0.5,
+        translateX: 0,
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.easeOut',
     });
-}); */
+
+});
 
 </script>
