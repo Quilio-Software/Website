@@ -16,19 +16,22 @@
         <!-- ========================================================================================== -->
         <!-- HERO SECTION CONTAINER -->
         <!-- ========================================================================================== -->
-        <section class="relative h-[962px] w-full flex justify-center items-center overflow-hidden">
+        <section ref="heroContainer" class="relative h-[962px] w-full flex justify-center items-center overflow-hidden">
             <!-- ========================================================================================== -->
             <!-- HERO SECTION INNER (TITLE) CONTAINER -->
             <!-- ========================================================================================== -->
             <div ref="heroTitleContainer" class="mx-10 flex flex-col justify-center items-center gap-8 cursor-default">
                 <!-- TITLE PRIMARY -->
-                <h3
+                <h3 ref="heroTitle"
                     class="text-center text-5xl sm:text-6xl lg:text-7xl font-sans font-bold tracking-wide text-gray/50 ease duration-300">
-                    Building for
-                    the future, <span class="bg-gradient-2-homepage-title bg-clip-text text-transparent">today.</span>
+                    <span class="heroTitleWord">Building </span>
+                    <span class="heroTitleWord">for </span>
+                    <span class="heroTitleWord">the </span>
+                    <span class="heroTitleWord">future, </span>
+                    <span class=" heroTitleWord bg-gradient-2-homepage-title bg-clip-text text-transparent">today.</span>
                 </h3>
                 <!-- TITLE SECONDARY -->
-                <h5
+                <h5 ref="heroSubTitle"
                     class="text-center font-avenir text-xl sm:text-2xl lg:text-3xl font-medium tracking-wide text-primary/400 ease duration-300">
                     Audio engineering
                     solutions
@@ -60,7 +63,7 @@
                 <!-- S1 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="s1Inner"
-                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
+                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
                     <!-- ========================================================================================== -->
                     <!-- S1 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
@@ -90,7 +93,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -101,7 +104,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -113,7 +116,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -130,7 +133,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -142,7 +145,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -154,7 +157,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -202,7 +205,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -214,7 +217,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -232,7 +235,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -278,7 +281,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -289,7 +292,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -300,7 +303,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -316,7 +319,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -327,7 +330,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -338,7 +341,7 @@
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
-                            <div class="flex items-center gap-4">
+                            <div class="pointer flex items-center gap-4">
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
@@ -655,7 +658,7 @@ import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 import scrollTrigger from 'gsap/ScrollTrigger';
 //globalAnimations.js
-import { pageTransition, serviceAnimation, testimonialsAndTechStackAnimation } from '../composables/globalAnimations';
+import { pageTransition, cardAnimation } from '../composables/globalAnimations';
 //FOOTER import
 import Footer from '../components/Footer.vue';
 //EmailForm import
@@ -674,11 +677,14 @@ const container = ref(null);
 
 //GSAP animations//======================================
 const animations = gsap;
-const animationsTimeline = gsap.timeline;
+const animationsTimeline = gsap.timeline();
 //=======================================================
 
 //HERO SECTION elements//================================
+const heroContainer = ref(null);
 const heroTitleContainer = ref(null);
+const heroTitle = ref(null);
+const heroSubTitle = ref(null);
 //=======================================================
 
 //WHAT WE DO SECTION//===================================
@@ -726,9 +732,6 @@ const testimonialsPersona = ref(null);
 const ourStackOuter = ref(null);
 const ourStackInner = ref(null);
 const ourStackTitle = ref(null);
-const cPP = ref(null);
-const python = ref(null);
-const javaScript = ref(null);
 //=======================================================
 
 //CONTACT US ============================================
@@ -744,6 +747,131 @@ const contactUsAbout2 = ref(null);
 
 //========================================================================================================================
 //================================================= PAGE ANIMATIONS ======================================================
+
+onMounted(() => {
+    //================= HERO SECTION =========================
+
+    /* HERO TITLE WORD ANIMATION */
+    const heroTitleWords = document.querySelectorAll('.heroTitleWord');
+
+    heroTitleWords.forEach((word) => {
+        const wordText = word.textContent;
+        word.textContent = '';
+
+        const wordTimeline = gsap.timeline();
+
+        wordText.split('').map((letter, index) => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            word.appendChild(span);
+
+            wordTimeline.from(span, {
+                duration: 0.09,
+                opacity: 0,
+                x: 20,
+            }, `letter-${index}`);
+        });
+
+        animationsTimeline.add(wordTimeline, '>');
+    });
+
+    /* HERO SUB TITLE ANIMATION */
+    animationsTimeline.fromTo(heroSubTitle.value, {
+        translateY: '-10%',
+        opacity: 0,
+    }, {
+        translateY: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.3,
+        ease: 'Power2.ease',
+    });
+
+    /* HERO TITLE CONTAINER - parrelax */
+    animations.to(heroTitleContainer.value, {
+        translateY: '+100',
+        scrollTrigger: {
+            trigger: heroContainer.value,
+            start: 'top',
+            end: 'center top',
+            scrub: 1,
+        },
+    });
+
+    //========================================================
+    //================= WHAT WE DO ===========================
+
+    //Title animation onEnter
+    animations.from(whatWeDoTitle.value, {
+        y: '-100%',
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: whatWeDoContainer.value,
+            start: 'top center',
+        },
+    });
+
+    animations.from(whatWeDoTitle.value, {
+        y: '-10%',
+        scrollTrigger: {
+            trigger: whatWeDoContainer.value,
+            start: 'top center',
+            end: 'bottom top',
+            scrub: 1,
+        },
+    });
+
+    //========================================================
+    //================= SERVICES =============================
+
+    cardAnimation(s1Outer, s1Inner, s1Title, s1Line, s1Text, s1PointerCols);
+    cardAnimation(s2Outer, s2Inner, s2Title, s2Line, s2Text, s2PointerCols);
+    cardAnimation(s3Outer, s3Inner, s3Title, s3Line, s3Text, s3PointerCols);
+
+    //========================================================
+    //================= TESTIMONIALS =========================
+
+    const testimonialsTimeline = gsap.timeline;
+
+    testimonialsTimeline({
+        scrollTrigger: {
+            trigger: testimonialsOuter.value,
+            start: 'bottom bottom',
+        }
+    }).fromTo(testimonialsOuter.value, {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.ease'
+    }).fromTo(testimonialsTitle.value, {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.ease'
+    }).fromTo(testimonialsLogos.value, {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.ease'
+    }).fromTo(testimonialsQuote.value, {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.ease'
+    }).fromTo(testimonialsPersona.value, {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: 'Power2.ease'
+    });
+
+});
 
 /* onMounted(() => {
     //================= HERO SECTION =========================
