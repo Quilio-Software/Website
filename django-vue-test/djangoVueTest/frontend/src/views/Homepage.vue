@@ -1,13 +1,3 @@
-<!-- ========================================================================================== -->
-<!-- 
-
-    NOTE TO SELF: 
-        - search: 'delete' -> items to delete
-        - search: 'animate' -> animateable objects
-
--->
-<!-- ========================================================================================== -->
-
 <template>
     <!-- ========================================================================================== -->
     <!-- PAGE CONTENT CONTAINER -->
@@ -42,9 +32,9 @@
         <!-- ========================================================================================== -->
         <!-- WHAT WE DO SECTION -->
         <!-- ========================================================================================== -->
-        <section ref="whatWeDoContainer" class="w-full h-60 flex justify-center items-center">
+        <section ref="whatWeDoContainer" class="w-full h-40 sm:h-60 flex justify-center items-center">
             <h3 ref="whatWeDoTitle"
-                class="font-uncut text-5xl sm:text-6xl font-semibold tracking-wide text-gray/50 ease duration-300">
+                class="font-uncut text-3xl sm:text-5xl md:text-6xl font-semibold tracking-wide text-gray/50 ease duration-300">
                 What We Do
             </h3>
         </section>
@@ -57,25 +47,39 @@
             <!-- ========================================================================================== -->
             <!-- S1 CARD OUTER CONTAINER - Audio Signal Processing and Plugins -->
             <!-- ========================================================================================== -->
-            <div ref="s1Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
+            <div ref="s1Outer" class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
                 <!-- ========================================================================================== -->
                 <!-- S1 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="s1Inner"
-                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
+                    class="max-w-6xl py-6 sm:py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-6 sm:gap-8 md:gap-9 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
                     <!-- ========================================================================================== -->
                     <!-- S1 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
-                    <h3 ref="s1Title" class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                    <h3 ref="s1Title"
+                        class="select-none font-uncut text-xl sm:text-2xl md:text-3xl font-bold text-gray/50 ease duration-300">
                         Audio
                         Signal
                         Processing and
                         Plugins</h3>
                     <!-- line - animate -->
                     <div ref="s1Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+
+                    <!-- ========================================================================================== -->
+                    <!-- SEE MORE -->
+                    <!-- ========================================================================================== -->
+                    <div class="inline sm:hidden">
+                        <p
+                            class="select-none ml-1  font-poppins text-base font-thin tracking-wide text-gray/50 ease duration-300">
+                            View <span ref="toggleTitle"
+                                class="toggleTitle text-primary/400 hover:underline cursor-pointer">more</span>
+                            <span class="toggleIcon text-primary/400" ref="toggleIcon">+</span>
+                        </p>
+                    </div>
+
                     <p ref="s1Text"
-                        class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        class="cardText opacity-0 hidden sm:inline font-poppins text-base sm:text-lg md:text-xl leading-tight md:leading-normal lg:leading-8 font-light sm:font-normal tracking-wide text-gray/200 ease duration-300">
                         In
                         the world of
                         audio, the right
@@ -89,15 +93,15 @@
                         <!-- ========================================================================================== -->
                         <!-- S1 COLUMN 1 -->
                         <!-- ========================================================================================== -->
-                        <div class="flex flex-col gap-9 mr-6 sm:mr-10 lg:mr-20">
+                        <div class="flex flex-col gap-4 sm:gap-7 mr-4 sm:mr-6 md:mr-10 lg:mr-20">
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
                                     Instrument plugins
                                     for musicians</p>
                             </div>
@@ -105,10 +109,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
                                     Mixing and mastering tools
                                     for recording engineers
                                 </p>
@@ -117,10 +121,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
                                     Audio solutions
                                     for businesses
                                 </p>
@@ -129,15 +133,15 @@
                         <!-- ========================================================================================== -->
                         <!-- S1 COLUMN 2 -->
                         <!-- ========================================================================================== -->
-                        <div class="flex flex-col gap-9">
+                        <div class="flex flex-col gap-4 sm:gap-7">
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
                                     Speech processing
                                     software
                                 </p>
@@ -146,10 +150,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
                                     Custom-built
                                     audio software
                                 </p>
@@ -158,10 +162,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
                                     Noise detection
                                     and reduction tools
                                 </p>
@@ -175,7 +179,7 @@
             <!-- ========================================================================================== -->
             <!-- S2 CARD OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div ref="s2Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
+            <div ref="s2Outer" class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
                 <!-- ========================================================================================== -->
                 <!-- S2 CARD INNER CONTAINER -->
@@ -189,8 +193,21 @@
                         Neuro-Engineering Solutions</h3>
                     <!-- line - animate -->
                     <div ref="s2Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+
+                    <!-- ========================================================================================== -->
+                    <!-- SEE MORE -->
+                    <!-- ========================================================================================== -->
+                    <div>
+                        <p
+                            class="ml-1 inline sm:hidden font-poppins text-base font-thin tracking-wide text-gray/50 ease duration-300">
+                            View <span ref="toggleTitle"
+                                class="toggleTitle text-primary/400 hover:underline cursor-pointer">more</span>
+                            <span class="toggleIcon text-primary/400" ref="toggleIcon">+</span>
+                        </p>
+                    </div>
+
                     <p ref="s2Text"
-                        class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        class="cardText hidden sm:inline font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
                         Scientists have been trying to unlock the secrets of the brain for generations. We’re not
                         saying
                         we’ve succeeded - but we’re pretty close, and our solutions reflect that.</p>
@@ -252,7 +269,7 @@
             <!-- ========================================================================================== -->
             <!-- S3 CARD OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div ref="s3Outer" class="my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
+            <div ref="s3Outer" class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
 
                 <!-- ========================================================================================== -->
                 <!-- S3 CARD INNER CONTAINER -->
@@ -266,8 +283,21 @@
                         Custom AI Solutions</h3>
                     <!-- line - animate -->
                     <div ref="s3Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+
+                    <!-- ========================================================================================== -->
+                    <!-- SEE MORE -->
+                    <!-- ========================================================================================== -->
+                    <div>
+                        <p
+                            class="select-none ml-1 inline sm:hidden font-poppins text-base font-thin tracking-wide text-gray/50 ease duration-300">
+                            View <span ref="toggleTitle"
+                                class="toggleTitle text-primary/400 hover:underline cursor-pointer">more</span>
+                            <span class="toggleIcon text-primary/400" ref="toggleIcon">+</span>
+                        </p>
+                    </div>
+
                     <p ref="s3Text"
-                        class="font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        class="cardText hidden sm:inline font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
                         AI is both the Holy Grail of the Internet and the sign of End Times. We see it exactly as it is
                         though - a tool to make our lives, and by extension, your lives easier. </p>
                     <!-- ========================================================================================== -->
@@ -285,7 +315,7 @@
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-base sm:text-xl md:text-2xl text-gray/50 ease duration-300">
                                     Customised NLP models for chatbots
                                 </p>
                             </div>
@@ -296,7 +326,7 @@
                                 <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins leading-7 font-thin text-base sm:text-xl md:text-2xl text-gray/50 ease duration-300">
                                     Object detection and recognition models
                                 </p>
                             </div>
@@ -693,8 +723,8 @@ const whatWeDoContainer = ref(null);
 const whatWeDoTitle = ref(null);
 //=======================================================
 
-//SERVICES SECTION=======================================
-const services = ref(null);//container
+//SERVICE CARDS SECTION=======================================
+const services = ref(null);//all cards container
 //SERVICE 1 (Audio Signal Processing and Plugins)
 const s1Outer = ref(null);
 const s1Inner = ref(null);
@@ -747,10 +777,56 @@ const contactUsAbout2 = ref(null);
 //PAGE TRANSITION ANIMATIONS from globalAnimations.js
 //pageTransition(container);
 
+
+
 //========================================================================================================================
 //================================================= PAGE ANIMATIONS ======================================================
 
 onMounted(() => {
+
+    //================= SEE MORE SECTIONS FOR CARDS =========================
+    const toggleTitle = document.querySelectorAll('.toggleTitle');
+
+    toggleTitle.forEach((title) => {
+        title.addEventListener('click', () => {
+            const cardParent = title.parentElement.parentElement.parentElement;
+            const cardText = cardParent.querySelector('.cardText');
+
+            const icon = title.parentElement.querySelector('.toggleIcon');
+
+            if (cardText.classList.contains('hidden')) {
+
+                title.textContent = 'less';
+                icon.textContent = ' -';
+
+                cardText.classList.remove('hidden');
+                cardText.classList.add('inline', 'opacity-1');
+
+            } else {
+
+                title.textContent = 'more';
+                icon.textContent = ' +';
+
+                cardText.classList.remove('inline');
+                cardText.classList.add('hidden', 'opacity-0');
+            }
+        });
+    });
+
+    //================= MOUSE OVER CARD ROTATION =========================
+
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach((card) => {
+        card.addEventListener('mousemove', (e) => {
+            const maxRotation = 20;
+            const rotationX = (e.clientY / window.innerHeight - 0.5) * maxRotation;
+            const rotationY = (e.clientX / window.innerWidth - 0.5) * maxRotation;
+
+            card.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+        });
+    });
+
     //================= HERO SECTION =========================
 
     /* HERO TITLE WORD ANIMATION */
@@ -831,8 +907,65 @@ onMounted(() => {
     cardAnimation(s2Outer, s2Inner, s2Title, s2Line, s2Text, s2PointerCols);
     cardAnimation(s3Outer, s3Inner, s3Title, s3Line, s3Text, s3PointerCols);
 
+    gsap.fromTo(s1Outer.value, {
+        translateX: '0%',
+        opacity: 1,
+    }, {
+        translateX: '+10%',
+        opacity: 0,
+        scrollTrigger: {
+            trigger: s1Outer.value,
+            start: 'center center',
+            end: 'bottom top',
+            scrub: 0.5
+        }
+    });
+
+    gsap.fromTo(s2Outer.value, {
+        translateX: '0%',
+        opacity: 1,
+    }, {
+        translateX: '-10%',
+        opacity: 0,
+        scrollTrigger: {
+            trigger: s2Outer.value,
+            start: 'center center',
+            end: 'center top',
+            scrub: 0.5
+        }
+    });
+
+    gsap.fromTo(s3Outer.value, {
+        translateX: '0%',
+        opacity: 1,
+    }, {
+        translateX: '+10%',
+        opacity: 0,
+        scrollTrigger: {
+            trigger: s3Outer.value,
+            start: 'center center',
+            end: 'center top',
+            scrub: 0.5
+        }
+    });
+
     //========================================================
     //================= TESTIMONIALS =========================
+
+    animations.fromTo(testimonialsOuter.value, {
+        opacity: 0,
+    }, {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'Power2.easeOut',
+        scrollTrigger: {
+            trigger: testimonialsOuter.value,
+            start: 'top center',
+        }
+    });
+
+    /* 
+    old animation
 
     const testimonialsTimeline = gsap.timeline;
 
@@ -841,7 +974,9 @@ onMounted(() => {
             trigger: testimonialsOuter.value,
             start: 'center bottom'
         }
-    }).fromTo(testimonialsLogos.value.children, {
+    })
+
+    .fromTo(testimonialsLogos.value.children, {
         translateX: -20,
         autoAlpha: 0,
     }, {
@@ -859,10 +994,25 @@ onMounted(() => {
         delay: 0.3,
         ease: 'Power2.easeOut',
     });
+    */
 
     //========================================================
     //================= OUR STACK ============================
 
+    animations.fromTo(ourStackOuter.value, {
+        opacity: 0,
+    }, {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'Power2.ease',
+        scrollTrigger: {
+            trigger: ourStackOuter.value,
+            start: 'center bottom',
+        },
+    });
+
+    /* 
+    old animation
     const ourStackTimeline = gsap.timeline;
 
     ourStackTimeline({
@@ -878,6 +1028,7 @@ onMounted(() => {
         autoAlpha: 1,
         stagger: 0.04,
     });
+    */
 
     //========================================================
     //================= CONTACT US LINE ======================

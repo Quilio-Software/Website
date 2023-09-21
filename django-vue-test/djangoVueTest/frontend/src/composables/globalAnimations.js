@@ -143,6 +143,7 @@ export function cardAnimation(outer, inner, title, line, text, pointerContainer)
         delay: -0.3,
     });
 
+    /* PARRELAX */
     gsap.fromTo(line.value, {
         width: '10%',
     }, {
