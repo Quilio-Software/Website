@@ -62,7 +62,6 @@ onMounted(() => {
                     }, {
                         opacity: 1,
                         height: 'fit-content',
-                        translateY: '10px',
                         duration: 0.5,
                         ease: 'Power2.easeInOut',
                         delay: 0.1,
@@ -86,7 +85,7 @@ onMounted(() => {
                 sideNav.value.classList.remove('h-full');
 
                 gsap.fromTo(sideNav.value, {
-                    translateY: '10px',
+                    translateY: '4px',
                 }, {
                     translateY: 0,
                     duration: 0,
@@ -108,7 +107,7 @@ onMounted(() => {
     const line1Animate =
         gsap.to(line1.value, {
             rotate: '45deg',
-            translateY: '10px',
+            translateY: '7px',
             duration: 0.3,
             ease: 'Power2.easeIn',
             paused: true,
@@ -117,7 +116,7 @@ onMounted(() => {
     const line3Animate =
         gsap.to(line3.value, {
             rotate: '-45deg',
-            translateY: '-10px',
+            translateY: '-7px',
             duration: 0.3,
             ease: 'Power2.easeIn',
             paused: true,
@@ -162,40 +161,40 @@ onMounted(() => {
 <template>
     <div class="absolute top-0 left-0 w-full h-full z-10 overflow-hidden">
         <!-- DEALS CONTAINER -->
-        <div ref="deals" class="h-16 sm:h-24 flex items-center justify-center  bg-primary/400 ease duration-300">
-            <h3
-                class="text-center text-lg sm:text-2xl lg:text-3xl font-sans font-bold tracking-wide text-gray/50 ease duration-300">
+        <div ref="deals" class="h-14 sm:h-16 lg:h-18 flex items-center justify-center  bg-primary/400 ease duration-300">
+            <h3 class="text-center text-base lg:text-lg font-sans font-bold tracking-wide text-gray/50 ease duration-300">
                 New Deals: <span class="italic font-normal">40% </span><span class="font-light">off everything!</span></h3>
         </div>
         <!-- NAV OUTER -->
         <nav ref="navOuter" class="top-0 left-0 w-full h-fit z-50">
-            <div class="nav-main h-24 flex flex-row justify-around items-center bg-gray/900">
+            <div class="nav-main h-14 sm:h-16 lg:h-18 flex flex-row justify-around items-center bg-gray/900">
                 <!-- LOGO -->
                 <RouterLink to="/"
-                    class="logo-container w-20 md:w-24 h-8 flex justify-center items-center ease duration-300">
+                    class="logo-container w-14 sm:w-16 lg:w-20 h-8 flex justify-center items-center ease duration-300">
                     <!-- Need to fill with LOGO -->
-                    <img class="-translate-y-[1px] sm:-translate-y-[3px] md:-translate-y-[4px]"
-                        src="../assets/img/nav/logo/full-logo.svg" alt="Quillio logo">
+                    <img class="-translate-y-[1px] sm:-translate-y-[2px]" src="../assets/img/nav/logo/full-logo.svg"
+                        alt="Quillio logo">
                 </RouterLink>
                 <!-- NAV BUTTONS -->
-                <ul class="nav-buttons flex flex-row justify-around gap-6 sm:gap-8 md:gap-10 lg:gap-16 ease duration-300">
+                <ul
+                    class="select-none nav-buttons flex flex-row justify-around gap-6 sm:gap-8 md:gap-10 lg:gap-16 ease duration-300">
                     <li>
                         <RouterLink to="/products/deals"
-                            class="hidden sm:inline text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
+                            class="hidden sm:inline text-base lg:text-lg text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
                             aria-current="page">
                             Products
                         </RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/about-us"
-                            class="hidden sm:inline text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
+                            class="hidden sm:inline text-base lg:text-lg text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300"
                             aria-current="page">
                             About Us
                         </RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/contact-us"
-                            class="hidden sm:inline text-xl md:text-2xl text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300">
+                            class="hidden sm:inline text-base lg:text-lg text-center font-poppins font-thin tracking-wide text-gray/50 ease duration-300">
                             Contact Us
                         </RouterLink>
                     </li>
@@ -206,28 +205,29 @@ onMounted(() => {
                 <div class="flex gap-8 items-center">
 
                     <!-- USER OUTER -->
-                    <div class="w-28 sm:w-32 md:w-36 h-10 md:h-12 rounded bg-surface/primary cursor-pointer">
+                    <div class="select-none w-[72px] sm:w-24 lg:w-28 h-6 sm:h-8 rounded bg-surface/primary cursor-pointer">
                         <!-- USER INNER -->
                         <div class="h-full mx-1 flex flex-row justify-around items-center">
                             <!-- SHOPPING BASKET IMG -->
-                            <img class="w-5 sm:w-fit" src="../assets/img/nav/basket/shopping.svg" alt="basket icon">
+                            <img class="w-3 sm:w-4 lg:w-5" src="../assets/img/nav/basket/shopping.svg" alt="basket icon">
                             <!-- BASKET AMONUT ICON -->
                             <div
-                                class="w-5 sm:w-6 h-5 sm:h-6 text-sm sm:text-base flex justify-center items-center rounded-full bg-[#352d3c] text-gray/50">
+                                class="w-3 sm:w-4 lg:w-5 h-3 sm:h-4 lg:h-5 text-sm sm:text-base flex justify-center items-center rounded-full bg-[#352d3c] text-gray/50">
                                 1
                             </div>
                             <!-- LINE SPLITTER -->
-                            <div class="w-0.5 h-5 sm:h-6 rounded bg-gray/50"></div>
+                            <div class="w-0.5 h-4 sm:h-5 rounded bg-gray/50"></div>
                             <!-- ACCOUNT ICON -->
-                            <img class="w-fit" src="../assets/img/nav/account/user-circle.svg" alt="account icon">
+                            <img class="w-4 sm:w-4 lg:w-5" src="../assets/img/nav/account/user-circle.svg"
+                                alt="account icon">
                         </div>
                     </div>
 
                     <!-- BURGER -->
-                    <div ref="burgerContainer" class="flex sm:hidden flex-col gap-2 cursor-pointer">
-                        <div ref="line1" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
-                        <div ref="line2" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
-                        <div ref="line3" class="w-8 h-0.5 bg-gray/50 rounded-full"></div>
+                    <div ref="burgerContainer" class="flex sm:hidden flex-col gap-[5px] cursor-pointer">
+                        <div ref="line1" class="w-6 h-0.5 bg-gray/50 rounded-full"></div>
+                        <div ref="line2" class="w-6 h-0.5 bg-gray/50 rounded-full"></div>
+                        <div ref="line3" class="w-6 h-0.5 bg-gray/50 rounded-full"></div>
                     </div>
                 </div>
             </div>
@@ -260,44 +260,27 @@ onMounted(() => {
         <!-- SideNav FULL WIDTH TEST -->
         <div ref="sideNav" class="absolute sm:hidden right-0 w-full bg-gray/900 bg-opacity-95">
 
-            <div class="ml-[9vw] my-10 flex flex-col gap-10">
+            <div class="ml-[9vw] my-4 flex flex-col gap-10">
 
                 <!-- LINKS -->
-                <div class="flex flex-col gap-10">
+                <div class="flex flex-col gap-5">
                     <!-- PRODUCTS -->
                     <RouterLink to="/products/deals"
-                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:text-primary/400 ease duration-300">
+                        class="text-sm font-poppins font-normal tracking-wide text-gray/50 hover:text-primary/400 ease duration-300">
                         Products
                     </RouterLink>
 
                     <!-- ABOUT US -->
                     <RouterLink to="/about-us"
-                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:text-primary/400 ease duration-300">
+                        class="text-sm font-poppins font-normal tracking-wide text-gray/50 hover:text-primary/400 ease duration-300">
                         About Us
                     </RouterLink>
 
                     <!-- CONTACT US -->
                     <RouterLink to="/contact-us"
-                        class="text-lg font-poppins font-normal tracking-wide text-gray/50 hover:text-primary/400 ease duration-300">
+                        class="text-sm font-poppins font-normal tracking-wide text-gray/50 hover:text-primary/400 ease duration-300">
                         Contact Us
                     </RouterLink>
-                </div>
-
-                <div class="hidden">
-                    <!-- DIVIDER -->
-                    <div class="h-[1px] w-3/5 rounded-full bg-gray/600"></div>
-
-                    <!-- FOOTER -->
-                    <p class=" w-full xl:w-2/3 font-poppins text-sm text-gray/600">
-                        © 2023
-                        Quilio Ltd.</p>
-
-                    <!-- SOCIALS -->
-                    <div class="flex gap-4">
-                        <img class="w-6" src="../assets/img/footer/socials/linkedin-logo.png" alt="">
-                        <img class="w-6" src="../assets/img/footer/socials/linkedin-logo.png" alt="">
-                    </div>
-
                 </div>
 
             </div>
