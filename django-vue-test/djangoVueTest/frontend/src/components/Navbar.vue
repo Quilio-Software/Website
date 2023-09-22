@@ -260,7 +260,7 @@ onMounted(() => {
         <!-- SideNav FULL WIDTH TEST -->
         <div ref="sideNav" class="absolute sm:hidden right-0 w-full bg-gray/900 bg-opacity-95">
 
-            <div class="ml-[9vw] my-4 flex flex-col gap-10">
+            <div class="ml-[11vw] my-4 flex flex-col gap-10">
 
                 <!-- LINKS -->
                 <div class="flex flex-col gap-5">

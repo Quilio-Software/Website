@@ -13,7 +13,7 @@
             <div ref="heroTitleContainer" class="mx-10 flex flex-col justify-center items-center gap-8 cursor-default">
                 <!-- TITLE PRIMARY -->
                 <h3 ref="heroTitle"
-                    class="text-center text-5xl sm:text-6xl lg:text-7xl font-sans font-bold tracking-wide text-gray/50 ease duration-300">
+                    class="text-center text-4xl sm:text-5xl lg:text-6xl font-sans font-bold tracking-wide text-gray/50 ease duration-300">
                     <span class="heroTitleWord">Building </span>
                     <span class="heroTitleWord">for </span>
                     <span class="heroTitleWord">the </span>
@@ -22,7 +22,7 @@
                 </h3>
                 <!-- TITLE SECONDARY -->
                 <h5 ref="heroSubTitle"
-                    class="text-center font-avenir text-xl sm:text-2xl lg:text-3xl font-medium tracking-wide text-primary/400 ease duration-300">
+                    class="text-center font-avenir text-base sm:text-xl lg:text-2xl font-medium tracking-wide text-primary/400 ease duration-300">
                     Audio engineering
                     solutions
                     made by engineers, for artists</h5>
@@ -32,9 +32,9 @@
         <!-- ========================================================================================== -->
         <!-- WHAT WE DO SECTION -->
         <!-- ========================================================================================== -->
-        <section ref="whatWeDoContainer" class="w-full h-40 sm:h-60 flex justify-center items-center">
+        <section ref="whatWeDoContainer" class="w-full h-20 sm:h-40 flex justify-center items-center">
             <h3 ref="whatWeDoTitle"
-                class="font-uncut text-3xl sm:text-5xl md:text-6xl font-semibold tracking-wide text-gray/50 ease duration-300">
+                class="font-uncut text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-gray/50 ease duration-300">
                 What We Do
             </h3>
         </section>
@@ -42,36 +42,45 @@
         <!-- ========================================================================================== -->
         <!-- SERVICES SECTION -->
         <!-- ========================================================================================== -->
-        <section ref="services" class="w-full flex flex-col items-center">
+        <section ref="services" class="w-full flex flex-col items-center overflow-hidden">
 
             <!-- ========================================================================================== -->
             <!-- S1 CARD OUTER CONTAINER - Audio Signal Processing and Plugins -->
             <!-- ========================================================================================== -->
-            <div ref="s1Outer" class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
+            <div ref="s1Outer"
+                class="card select-none my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300 overflow-hidden">
 
                 <!-- ========================================================================================== -->
                 <!-- S1 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="s1Inner"
-                    class="max-w-6xl py-6 sm:py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-6 sm:gap-8 md:gap-9 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
+                    class="max-w-6xl py-6 sm:py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-5 sm:gap-7 md:gap-8 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
+
+                    <!-- ========================================================================================== -->
+                    <!-- S1 CARD GRADIENT -->
+                    <!-- ========================================================================================== -->
+                    <div style="background: radial-gradient(circle, rgba(239, 239, 239, 0.05), rgba(239, 239, 239, 0.05) 10%, transparent, transparent 100%);"
+                        class="circle-mouse-gradient absolute w-screen h-screen top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-200 -z-10">
+                    </div>
+
                     <!-- ========================================================================================== -->
                     <!-- S1 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
                     <h3 ref="s1Title"
-                        class="select-none font-uncut text-xl sm:text-2xl md:text-3xl font-bold text-gray/50 ease duration-300">
+                        class="font-uncut text-lg sm:text-xl md:text-2xl font-bold text-gray/50 ease duration-300">
                         Audio
                         Signal
                         Processing and
                         Plugins</h3>
                     <!-- line - animate -->
-                    <div ref="s1Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <div ref="s1Line" class="h-0.5 w-60 bg-primary/400 rounded-full"></div>
 
                     <!-- ========================================================================================== -->
-                    <!-- SEE MORE -->
+                    <!-- S1 SEE MORE -->
                     <!-- ========================================================================================== -->
-                    <div class="inline sm:hidden">
+                    <div class="inline sm:hidden select-all">
                         <p
-                            class="select-none ml-1  font-poppins text-base font-thin tracking-wide text-gray/50 ease duration-300">
+                            class="select-none ml-1  font-poppins text-sm font-thin tracking-wide text-gray/50 ease duration-300">
                             View <span ref="toggleTitle"
                                 class="toggleTitle text-primary/400 hover:underline cursor-pointer">more</span>
                             <span class="toggleIcon text-primary/400" ref="toggleIcon">+</span>
@@ -79,7 +88,7 @@
                     </div>
 
                     <p ref="s1Text"
-                        class="cardText opacity-0 hidden sm:inline font-poppins text-base sm:text-lg md:text-xl leading-tight md:leading-normal lg:leading-8 font-light sm:font-normal tracking-wide text-gray/200 ease duration-300">
+                        class="cardText opacity-0 hidden sm:inline font-poppins text-sm sm:text-base md:text-lg leading-tight md:leading-normal lg:leading-8 font-light sm:font-normal tracking-wide text-gray/200 ease duration-300">
                         In
                         the world of
                         audio, the right
@@ -89,19 +98,19 @@
                     <!-- ========================================================================================== -->
                     <!-- S1 POINTER COLUMNS CONTAINER -->
                     <!-- ========================================================================================== -->
-                    <div ref="s1PointerCols" class="flex mt-2">
+                    <div ref="s1PointerCols" class="flex mt-2 items-baseline">
                         <!-- ========================================================================================== -->
                         <!-- S1 COLUMN 1 -->
                         <!-- ========================================================================================== -->
-                        <div class="flex flex-col gap-4 sm:gap-7 mr-4 sm:mr-6 md:mr-10 lg:mr-20">
+                        <div class="flex flex-col max-w-[50%] gap-4 sm:gap-7 mr-4 sm:mr-6 md:mr-10 lg:mr-20">
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Instrument plugins
                                     for musicians</p>
                             </div>
@@ -109,10 +118,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Mixing and mastering tools
                                     for recording engineers
                                 </p>
@@ -121,10 +130,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Audio solutions
                                     for businesses
                                 </p>
@@ -133,15 +142,15 @@
                         <!-- ========================================================================================== -->
                         <!-- S1 COLUMN 2 -->
                         <!-- ========================================================================================== -->
-                        <div class="flex flex-col gap-4 sm:gap-7">
+                        <div class="flex flex-col gap-5 sm:gap-7">
                             <!-- ========================================================================================== -->
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Speech processing
                                     software
                                 </p>
@@ -150,10 +159,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Custom-built
                                     audio software
                                 </p>
@@ -162,10 +171,10 @@
                             <!-- S1 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-6 sm:w-8 md:w-9" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins sm:leading-7 font-thin text-base sm:text-xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Noise detection
                                     and reduction tools
                                 </p>
@@ -179,27 +188,37 @@
             <!-- ========================================================================================== -->
             <!-- S2 CARD OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div ref="s2Outer" class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
+            <div ref="s2Outer"
+                class="card select-none my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300 overflow-hidden">
 
                 <!-- ========================================================================================== -->
                 <!-- S2 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="s2Inner"
-                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
+                    class="select-none max-w-6xl py-6 sm:py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-5 sm:gap-7 md:gap-8 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
+
+                    <!-- ========================================================================================== -->
+                    <!-- S2 CARD GRADIENT -->
+                    <!-- ========================================================================================== -->
+                    <div style="background: radial-gradient(circle, rgba(239, 239, 239, 0.05), rgba(239, 239, 239, 0.05) 10%, transparent, transparent 100%);"
+                        class="circle-mouse-gradient absolute w-screen h-screen top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-200 -z-10">
+                    </div>
+
                     <!-- ========================================================================================== -->
                     <!-- S2 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
-                    <h3 ref="s2Title" class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                    <h3 ref="s2Title"
+                        class="font-uncut text-lg sm:text-xl md:text-2xl font-bold text-gray/50 ease duration-300">
                         Neuro-Engineering Solutions</h3>
                     <!-- line - animate -->
-                    <div ref="s2Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <div ref="s2Line" class="h-0.5 w-60 bg-primary/400 rounded-full"></div>
 
                     <!-- ========================================================================================== -->
-                    <!-- SEE MORE -->
+                    <!-- S2 SEE MORE -->
                     <!-- ========================================================================================== -->
-                    <div>
+                    <div class="inline sm:hidden select-all">
                         <p
-                            class="ml-1 inline sm:hidden font-poppins text-base font-thin tracking-wide text-gray/50 ease duration-300">
+                            class="select-none ml-1  font-poppins text-sm font-thin tracking-wide text-gray/50 ease duration-300">
                             View <span ref="toggleTitle"
                                 class="toggleTitle text-primary/400 hover:underline cursor-pointer">more</span>
                             <span class="toggleIcon text-primary/400" ref="toggleIcon">+</span>
@@ -207,26 +226,26 @@
                     </div>
 
                     <p ref="s2Text"
-                        class="cardText hidden sm:inline font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        class="cardText opacity-0 hidden sm:inline font-poppins text-sm sm:text-base md:text-lg leading-tight md:leading-normal lg:leading-8 font-light sm:font-normal tracking-wide text-gray/200 ease duration-300">
                         Scientists have been trying to unlock the secrets of the brain for generations. We’re not
                         saying
                         we’ve succeeded - but we’re pretty close, and our solutions reflect that.</p>
                     <!-- ========================================================================================== -->
                     <!-- S2 POINTER ROWS CONTAINER -->
                     <!-- ========================================================================================== -->
-                    <div ref="s2PointerCols" class="flex flex-col gap-9">
+                    <div ref="s2PointerCols" class="flex flex-col gap-4 sm:gap-7 mr-4 sm:mr-6 md:mr-10 lg:mr-20">
                         <!-- ========================================================================================== -->
                         <!-- S2 ROW 1 -->
                         <!-- ========================================================================================== -->
-                        <div class="flex gap-6 sm:gap-10 md:gap-24 lg:gap-32">
+                        <div class="flex gap-3 sm:gap-7">
                             <!-- ========================================================================================== -->
                             <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Custom-designed
                                     research tools
                                 </p>
@@ -235,10 +254,10 @@
                             <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Engineering solutions
                                     for research labs
                                 </p>
@@ -253,10 +272,10 @@
                             <!-- S2 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Assistive technologies for people with neurological disorders
                                 </p>
                             </div>
@@ -269,27 +288,37 @@
             <!-- ========================================================================================== -->
             <!-- S3 CARD OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div ref="s3Outer" class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300">
+            <div ref="s3Outer"
+                class="card my-24 mx-4 sm:mx-10 md:mx-20 lg:mx-28 xl:mx-32 rounded-lg ease duration-300 overflow-hidden">
 
                 <!-- ========================================================================================== -->
                 <!-- S3 CARD INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="s3Inner"
-                    class="max-w-7xl py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-8 sm:gap-10 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow">
+                    class="select-none max-w-6xl py-6 sm:py-10 px-6 sm:px-8 md:px-10 lg:px-12 flex flex-col gap-5 sm:gap-7 md:gap-8 rounded-xl border border-card-whiteish border-opacity-20 bg-card-blackish bg-opacity-25 shadow-card-shadow ease duration-500">
+
+                    <!-- ========================================================================================== -->
+                    <!-- S3 CARD GRADIENT -->
+                    <!-- ========================================================================================== -->
+                    <div style="background: radial-gradient(circle, rgba(239, 239, 239, 0.05), rgba(239, 239, 239, 0.05) 10%, transparent, transparent 100%);"
+                        class="circle-mouse-gradient absolute w-screen h-screen top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-200 -z-10">
+                    </div>
+
                     <!-- ========================================================================================== -->
                     <!-- S3 CARD TITLE & ABOUT TEXT -->
                     <!-- ========================================================================================== -->
-                    <h3 ref="s3Title" class="font-uncut text-3xl sm:text-4xl font-bold text-gray/50 ease duration-300">
+                    <h3 ref="s3Title"
+                        class="font-uncut text-lg sm:text-xl md:text-2xl font-bold text-gray/50 ease duration-300">
                         Custom AI Solutions</h3>
                     <!-- line - animate -->
-                    <div ref="s3Line" class="h-1 w-60 bg-primary/400 rounded-full"></div>
+                    <div ref="s3Line" class="h-0.5 w-60 bg-primary/400 rounded-full"></div>
 
                     <!-- ========================================================================================== -->
-                    <!-- SEE MORE -->
+                    <!-- S3 SEE MORE -->
                     <!-- ========================================================================================== -->
-                    <div>
+                    <div class="inline sm:hidden select-all">
                         <p
-                            class="select-none ml-1 inline sm:hidden font-poppins text-base font-thin tracking-wide text-gray/50 ease duration-300">
+                            class="select-none ml-1  font-poppins text-sm font-thin tracking-wide text-gray/50 ease duration-300">
                             View <span ref="toggleTitle"
                                 class="toggleTitle text-primary/400 hover:underline cursor-pointer">more</span>
                             <span class="toggleIcon text-primary/400" ref="toggleIcon">+</span>
@@ -297,25 +326,25 @@
                     </div>
 
                     <p ref="s3Text"
-                        class="cardText hidden sm:inline font-poppins text-lg sm:text-xl md:text-2xl leading-normal md:leading-normal lg:leading-10 font-normal tracking-wide text-gray/200 ease duration-300">
+                        class="cardText opacity-0 hidden sm:inline font-poppins text-sm sm:text-base md:text-lg leading-tight md:leading-normal lg:leading-8 font-light sm:font-normal tracking-wide text-gray/200 ease duration-300">
                         AI is both the Holy Grail of the Internet and the sign of End Times. We see it exactly as it is
                         though - a tool to make our lives, and by extension, your lives easier. </p>
                     <!-- ========================================================================================== -->
                     <!-- S3 POINTER COLUMNS CONTAINER -->
                     <!-- ========================================================================================== -->
-                    <div ref="s3PointerCols" class="flex mt-2">
+                    <div ref="s3PointerCols" class="flex mt-2 gap-6">
                         <!-- ========================================================================================== -->
                         <!-- S3 COLUMN 1 -->
                         <!-- ========================================================================================== -->
-                        <div class="flex flex-col gap-9 mr-6 sm:mr-10 lg:mr-20">
+                        <div class="flex flex-col gap-3 sm:gap-7">
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-base sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Customised NLP models for chatbots
                                 </p>
                             </div>
@@ -323,10 +352,10 @@
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-base sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Object detection and recognition models
                                 </p>
                             </div>
@@ -334,10 +363,10 @@
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Fraud detection models for financial institutions
                                 </p>
                             </div>
@@ -345,15 +374,15 @@
                         <!-- ========================================================================================== -->
                         <!-- S3 COLUMN 1 -->
                         <!-- ========================================================================================== -->
-                        <div class="mb-5 sm:mb-10 flex flex-col gap-9">
+                        <div class="mb-5 sm:mb-10 flex flex-col gap-3 sm:gap-7">
                             <!-- ========================================================================================== -->
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Predictive maintenance for industrial equipment
                                 </p>
                             </div>
@@ -361,10 +390,10 @@
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     Recommender systems for E-commerce platforms
                                 </p>
                             </div>
@@ -372,10 +401,10 @@
                             <!-- S3 POINTER CONTAINER -->
                             <!-- ========================================================================================== -->
                             <div class="pointer flex items-center gap-4">
-                                <img class="w-8 md:w-fit" src="../assets/img/homepage/services/arrow.svg"
+                                <img class="w-5 sm:w-6 md:w-7" src="../assets/img/homepage/services/arrow.svg"
                                     alt="arrow pointing towards text">
                                 <p
-                                    class="line-clamp-2 font-poppins leading-7 font-thin text-lg sm:text-xl md:text-2xl text-gray/50 ease duration-300">
+                                    class="line-clamp-2 font-poppins sm:leading-6 font-thin text-sm sm:text-base md:text-lg text-gray/50 ease duration-300">
                                     and so on...
                                 </p>
                             </div>
@@ -392,63 +421,63 @@
             <!-- ========================================================================================== -->
             <!-- T_OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div class="w-full h-fit">
+            <div class="w-full h-fit flex justify-center">
                 <!-- ========================================================================================== -->
                 <!-- T_INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="testimonials"
-                    class="relative py-16 flex flex-col items-center justify-center my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg bg-surface/secondary ease duration-300">
+                    class="max-w-6xl relative py-16 flex flex-col items-center justify-center gap-8 md:gap-10 lg:gap-12 my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg bg-surface/secondary ease duration-300">
                     <!-- ========================================================================================== -->
                     <!-- T_TITLE -->
                     <!-- ========================================================================================== -->
                     <h3 ref="testimonialsTitle"
-                        class="text-3xl sm:text-4xl text-center mb-14 font-semibold tracking-wider text-gray/50">
+                        class="text-2xl sm:text-3xl text-center font-semibold tracking-wider text-gray/50">
                         Trusted By</h3>
                     <!-- ========================================================================================== -->
                     <!-- TABS -->
                     <!-- ========================================================================================== -->
-                    <div ref="testimonialsLogos" class="mb-14 w-11/12 flex justify-center">
+                    <div ref="testimonialsLogos" class=" w-11/12 flex justify-center">
                         <!-- ========================================================================================== -->
                         <!-- TAB --><!-- -- ACTIVE -- -->
                         <!-- ========================================================================================== -->
                         <div ref="logo"
-                            class="logo w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center bg-secondary/700-main/10 border-b-8 border-secondary/700-main ease duration-300">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                            class="logo w-1/3 md:w-1/5 h-20 sm:h-28 flex justify-center items-center bg-secondary/700-main/10 border-b-8 border-secondary/700-main ease duration-300">
+                            <img class="w-3/5" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
                         <div ref="logo"
-                            class="logo w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                            class="logo w-1/3 md:w-1/5 h-20 sm:h-28 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                            <img class="w-3/5" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
                         <div ref="logo"
-                            class="logo w-1/3 md:w-1/5 h-28 sm:h-40 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                            class="logo w-1/3 md:w-1/5 h-20 sm:h-28 flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                            <img class="w-3/5" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
                         <div ref="logo"
-                            class="logo w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                            class="logo w-1/5 h-20 sm:h-28 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                            <img class="w-3/5" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                         <!-- ========================================================================================== -->
                         <!-- TAB -->
                         <!-- ========================================================================================== -->
                         <div ref="logo"
-                            class="logo w-1/5 h-28 sm:h-40 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
-                            <img class="w-3/4" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
+                            class="logo w-1/5 h-20 sm:h-28 hidden md:flex justify-center items-center border-b-4 border-b-gray/50 ease duration-300 hover:bg-secondary/700-main/20">
+                            <img class="w-3/5" src="../assets/img/nav/logo/full-logo.svg" alt="quillio logo">
                         </div>
                     </div>
                     <!-- ========================================================================================== -->
                     <!-- QUOTE -->
                     <!-- ========================================================================================== -->
                     <p ref="testimonialsQuote"
-                        class="mb-14 italic font-poppins font-medium text-xl sm:text-2xl md:text-3xl tracking-wide text-center text-gray/50">
+                        class=" mx-10 italic font-poppins font-medium text-lg sm:text-xl md:text-2xl tracking-wide text-center text-gray/50">
                         “iawuefh awuieo fhaweioufh awepifhuaw pifuhqwiofuh qw iouefhwe fhqweuiofh
                         qweioufhqwiofuhweoiufhqwoif
                         uh.”
@@ -458,8 +487,7 @@
                     <!-- ========================================================================================== -->
                     <div ref="testimonialsPersona" class="flex items-center gap-5 mx-6">
                         <img class="w-12" src="../assets/img/homepage/testimonials/persona/person.png" alt="persona">
-                        <h3
-                            class="font-avenir font-light tracking-wide text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray/50">
+                        <h3 class="font-avenir font-light tracking-wide text-lg md:text-xl lg:text-2xl text-gray/50">
                             Full
                             Name -
                             Company
@@ -477,150 +505,49 @@
             <!-- ========================================================================================== -->
             <!-- OS OUTER CONTAINER -->
             <!-- ========================================================================================== -->
-            <div class="w-full">
+            <div class="w-full flex justify-center max-w-6xl">
                 <!-- ========================================================================================== -->
                 <!-- OS INNER CONTAINER -->
                 <!-- ========================================================================================== -->
                 <div ref="ourStackInner"
-                    class="relative py-16 flex flex-col items-center justify-center my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg bg-surface/secondary ease duration-300">
+                    class="min-w-full relative py-16 flex flex-col items-center justify-center my-24 mx-4 md:mx-6 lg:mx-10 xl:mx-32 2xl:mx-44 rounded-lg bg-surface/secondary ease duration-300">
                     <!-- ========================================================================================== -->
                     <!-- OS TITLE -->
                     <!-- ========================================================================================== -->
                     <h3 ref="ourStackTitle"
-                        class="text-3xl sm:text-4xl mb-14 text-center font-semibold tracking-wider text-gray/50">Our
+                        class="text-2xl sm:text-3xl mb-10 sm:mb-14 text-center font-semibold tracking-wider text-gray/50">
+                        Our
                         Tech Stack</h3>
                     <!-- ========================================================================================== -->
                     <!-- OS STACKS -->
                     <!-- ========================================================================================== -->
                     <div id="os-stacks" ref="ourStackItemContainer"
-                        class="flex flex-row flex-wrap justify-around items-center gap-16 px-16">
+                        class="flex justify-around items-center gap-16 sm:gap-20 md:gap-24 lg:gap-28 px-16">
 
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/binary-code.png" alt="Image 1">
-                            <p class="text-gray/50 text-center">Binary</p>
+                        <div ref="c++" class="w-1/4 my-8 flex flex-col justify-center items-center">
+                            <img class="w-14 sm:w-16 md:w-20 lg:w-24 mb-8 duration-300"
+                                src="../assets/img/homepage/tech-stack/c++.png" alt="python logo">
+                            <h3
+                                class="text-center font-avenir font-light tracking-wide text-lg md:text-xl sm:text-2xl text-gray/50">
+                                Python</h3>
                         </div>
 
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/coding-1.png"
-                                alt="Image 2">
-                            <p class="text-gray/50 text-center">Coding</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/coding-2.png"
-                                alt="Image 3">
-                            <p class="text-gray/50 text-center">Script</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/coding-3.png" alt="Image 4">
-                            <p class="text-gray/50 text-center">Algorithm</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/coding-4.png"
-                                alt="Image 5">
-                            <p class="text-gray/50 text-center">Syntax</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/coding.png" alt="Image 6">
-                            <p class="text-gray/50 text-center">Program</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-bullseye-48.png"
-                                alt="Image 7">
-                            <p class="text-gray/50 text-center">Target</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-christmas-tree-48.png"
-                                alt="Image 8">
-                            <p class="text-gray/50 text-center">Holiday</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-confetti-ball-48.png"
-                                alt="Image 9">
-                            <p class="text-gray/50 text-center">Celeb</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-crystal-ball-48.png"
-                                alt="Image 10">
-                            <p class="text-gray/50 text-center">Future</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-diamond-suit-48.png"
-                                alt="Image 11">
-                            <p class="text-gray/50 text-center">Gem</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-diving-mask-48.png"
-                                alt="Image 12">
-                            <p class="text-gray/50 text-center">Dive</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-firecracker-48.png"
-                                alt="Image 13">
-                            <p class="text-gray/50 text-center">Blast</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/icons8-fireworks-48.png"
-                                alt="Image 14">
-                            <p class="text-gray/50 text-center">Sparkle</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full"
-                                src="../assets/img/homepage/tech-stack/temp/icons8-flower-playing-cards-48.png"
-                                alt="Image 15">
-                            <p class="text-gray/50 text-center">Floral</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/otp.png" alt="Image16 ">
-                            <p class="text-gray/50 text-center "> OneTime </p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/programming-1.png"
-                                alt="Image 17">
-                            <p class="text-gray/50 text-center">Logic</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full" src="../assets/img/homepage/tech-stack/temp/programming.png" alt="Image 18">
-                            <p class="text-gray/50 text-center">Code</p>
-                        </div>
-
-                        <div class="grid gap-4 w-1/12">
-                            <img class="w-full bg-gray/50" src="../assets/img/homepage/tech-stack/temp/serialization.png"
-                                alt="Image 19">
-                            <p class="text-gray/50 text-center text-base">Serialize</p>
-                        </div>
-
-                        <!-- OLD STACK ITEMS -->
-                        <!-- <div ref="python" class="w-1/4 my-8 flex flex-col justify-center items-center">
-                            <img class="w-16 sm:w-24 md:w-28 lg:w-40 mb-8 duration-300"
+                        <div ref="python" class="w-1/4 my-8 flex flex-col justify-center items-center">
+                            <img class="w-14 sm:w-16 md:w-20 lg:w-24 mb-8 duration-300"
                                 src="../assets/img/homepage/tech-stack/python.png" alt="python logo">
-                            <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
+                            <h3
+                                class="text-center font-avenir font-light tracking-wide text-lg md:text-xl sm:text-2xl text-gray/50">
                                 Python</h3>
                         </div>
 
                         <div ref="javaScript" class="w-1/4 my-8 flex flex-col justify-center items-center">
-                            <img class="w-16 sm:w-24 md:w-28 lg:w-40 mb-8 ease duration-300"
+                            <img class="w-14 sm:w-16 md:w-20 lg:w-24 mb-8 ease duration-300"
                                 src="../assets/img/homepage/tech-stack/javascript.png" alt="javascript logo">
-                            <h3 class="text-center font-avenir font-light tracking-wide text-xl sm:text-3xl text-gray/50">
+                            <h3
+                                class="text-center font-avenir font-light tracking-wide text-lg md:text-xl sm:text-2xl text-gray/50">
                                 JavaScript</h3>
-                        </div> -->
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -634,7 +561,7 @@
             <!-- OUTER CONTAINER -->
             <!-- ========================================================================================== -->
             <div
-                class="py-[8vw] px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-48 gap-8 sm:gap-20 md:gap-14 lg:gap-20 flex flex-col md:flex-row ease duration-300">
+                class="py-[8vw] px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-48 flex flex-col md:flex-row gap-8 sm:gap-20 md:gap-14 lg:gap-20 ease duration-300">
                 <!-- ========================================================================================== -->
                 <!-- INNER CONTAINER -->
                 <!-- ========================================================================================== -->
@@ -643,7 +570,7 @@
                     <!-- TITLE -->
                     <!-- ========================================================================================== -->
                     <h3 ref="contactUsTitle"
-                        class="text-4xl sm:text-5xl md:text-4xl lg:text-5xl mb-8 font-avenir font-medium leading-[1.4] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.4] 2xl:leading-[1.4] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent ease duration-300">
+                        class="text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-8 font-avenir font-medium leading-[1.4] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.4] 2xl:leading-[1.4] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent ease duration-300">
                         We believe the best clients are those you form deep relationships with.
                     </h3>
                     <!-- ========================================================================================== -->
@@ -655,12 +582,12 @@
                     <!-- ========================================================================================== -->
                     <div>
                         <p ref="contactUsAbout1"
-                            class="mb-10 font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                            class="mb-10 font-poppins text-sm sm:text-lg md:text-base xl:text-lg tracking-wide font-light xl:leading-9 text-gray/50">
                             We
                             aim to please. We go above and beyond to ensure that you gain enough value to keep coming back
                         </p>
                         <p ref="contactUsAbout2"
-                            class="font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                            class="font-poppins text-sm sm:text-lg md:text-base xl:text-lg tracking-wide font-light xl:leading-9 text-gray/50">
                             Intrigued
                             enough? Let’s have a conversation about your next big idea.</p>
                     </div>
@@ -818,12 +745,25 @@ onMounted(() => {
     const cards = document.querySelectorAll('.card');
 
     cards.forEach((card) => {
-        card.addEventListener('mousemove', (e) => {
-            const maxRotation = 20;
-            const rotationX = (e.clientY / window.innerHeight - 0.5) * maxRotation;
-            const rotationY = (e.clientX / window.innerWidth - 0.5) * maxRotation;
 
-            card.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+        const cardGradient = card.querySelector('.circle-mouse-gradient');
+
+        card.addEventListener('mouseenter', () => {
+            card.addEventListener('mousemove', (e) => {
+                const maxRotation = 20;
+                const rotationX = (e.clientY / window.innerHeight - 0.5) * maxRotation;
+                const rotationY = (e.clientX / window.innerWidth - 0.5) * maxRotation;
+
+                card.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+
+                cardGradient.style.left = `${e.clientX - card.getBoundingClientRect().left}px`;
+                cardGradient.style.top = `${e.clientY - card.getBoundingClientRect().top}px`;
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'rotateX(0deg) rotateY(0deg)';
         });
     });
 
@@ -881,7 +821,7 @@ onMounted(() => {
 
     //Title animation onEnter
     animations.from(whatWeDoTitle.value, {
-        y: '-100%',
+        translateY: '-100%',
         opacity: 0,
         duration: 1,
         scrollTrigger: {
@@ -891,7 +831,7 @@ onMounted(() => {
     });
 
     animations.from(whatWeDoTitle.value, {
-        y: '-10%',
+        translateY: '+150%',
         scrollTrigger: {
             trigger: whatWeDoContainer.value,
             start: 'top center',
@@ -915,7 +855,7 @@ onMounted(() => {
         opacity: 0,
         scrollTrigger: {
             trigger: s1Outer.value,
-            start: 'center center',
+            start: 'top top',
             end: 'bottom top',
             scrub: 0.5
         }
@@ -929,8 +869,8 @@ onMounted(() => {
         opacity: 0,
         scrollTrigger: {
             trigger: s2Outer.value,
-            start: 'center center',
-            end: 'center top',
+            start: 'top top',
+            end: 'bottom top',
             scrub: 0.5
         }
     });
@@ -943,8 +883,8 @@ onMounted(() => {
         opacity: 0,
         scrollTrigger: {
             trigger: s3Outer.value,
-            start: 'center center',
-            end: 'center top',
+            start: 'top top',
+            end: 'bottom top',
             scrub: 0.5
         }
     });
@@ -966,16 +906,16 @@ onMounted(() => {
 
     /* 
     old animation
-
+    
     const testimonialsTimeline = gsap.timeline;
-
+    
     testimonialsTimeline({
         scrollTrigger: {
             trigger: testimonialsOuter.value,
             start: 'center bottom'
         }
     })
-
+    
     .fromTo(testimonialsLogos.value.children, {
         translateX: -20,
         autoAlpha: 0,
@@ -1014,7 +954,7 @@ onMounted(() => {
     /* 
     old animation
     const ourStackTimeline = gsap.timeline;
-
+    
     ourStackTimeline({
         scrollTrigger: {
             trigger: ourStackOuter.value,

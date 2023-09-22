@@ -20,14 +20,14 @@
                         <!-- LABEL -->
                         <!-- ========================================================================================== -->
                         <label
-                            class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 ease duration-300"
+                            class="font-poppins text-base sm:text-xl md:text-lg lg:text-xl font-light text-gray/50 ease duration-300"
                             for="name">Name
                             *</label>
                         <!-- ========================================================================================== -->
                         <!-- FORM INPUT -->
                         <!-- ========================================================================================== -->
                         <input placeholder="John Doe"
-                            class="text-base h-8 sm:h-10 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
+                            class="text-base h-8 sm:h-9 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
                             type="text" id="name" v-model="form.name" required>
                     </div>
 
@@ -39,14 +39,14 @@
                         <!-- LABEL -->
                         <!-- ========================================================================================== -->
                         <label
-                            class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 ease duration-300"
+                            class="font-poppins text-base sm:text-xl md:text-lg lg:text-xl font-light text-gray/50 ease duration-300"
                             for="email">Email
                             *</label>
                         <!-- ========================================================================================== -->
                         <!-- FORM INPUT -->
                         <!-- ========================================================================================== -->
                         <input placeholder="johndoe@site.com"
-                            class="text-base h-8 sm:h-10 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
+                            class="text-base h-8 sm:h-9 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
                             type="email" id="email" v-model="form.email" required>
                     </div>
                 </div>
@@ -59,13 +59,13 @@
                     <!-- LABEL -->
                     <!-- ========================================================================================== -->
                     <label
-                        class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 duration-300"
+                        class="font-poppins text-base sm:text-xl md:text-lg lg:text-xl font-light text-gray/50 duration-300"
                         for="phone">Phone</label>
                     <!-- ========================================================================================== -->
                     <!-- FORM INPUT -->
                     <!-- ========================================================================================== -->
                     <input placeholder="1234567890"
-                        class="text-base h-8 sm:h-10 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
+                        class="text-base h-8 sm:h-9 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md ease duration-100"
                         type="tel" id="phone" v-model="form.phone">
                 </div>
 
@@ -77,7 +77,7 @@
                     <!-- FORM INPUT -->
                     <!-- ========================================================================================== -->
                     <label
-                        class="font-poppins text-lg sm:text-2xl md:text-xl lg:text-2xl font-light text-gray/50 duration-100"
+                        class="font-poppins text-base sm:text-xl md:text-lg lg:text-xl font-light text-gray/50 duration-100"
                         for="message">Message</label>
                     <textarea placeholder="Some text over here"
                         class="h-28 border-1 hover:border-2 border-primary/400 focus:border-secondary/700-main text-gray/50 bg-surface/secondary rounded-md"
@@ -95,8 +95,7 @@
                         <input
                             class="w-5 h-5 border-1 hover:border-2 border-primary/400 focus: checked:bg-primary/400 focus:ring-primary/400 bg-surface/secondary rounded-md"
                             type="checkbox" id="acceptTerms" v-model="form.accept_terms" required>
-                        <label class="font-poppins text-sm sm:text-base font-light text-gray/50 duration-300"
-                            for="acceptTerms">I agree
+                        <label class="font-poppins text-sm font-light text-gray/50 duration-300" for="acceptTerms">I agree
                             with <a class="text-secondary/700-main" href="...">terms</a></label>
                     </div>
 
@@ -104,7 +103,7 @@
                     <!-- BUTTON -->
                     <!-- ========================================================================================== -->
                     <button
-                        class="h-10 sm:h-14 w-20 sm:w-40 lg:w-52 bg-primary/400 rounded-md font-light font-poppins text-lg lg:text-xl text-gray/50 duration-300"
+                        class="h-10 sm:h-12 w-20 sm:w-40 lg:w-44 bg-primary/400 rounded-md font-light font-poppins text-base lg:text-lg text-gray/50 duration-300"
                         type="submit">Send
                         <span class="hidden sm:inline">Message</span></button>
                 </div>
