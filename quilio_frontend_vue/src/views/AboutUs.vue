@@ -12,8 +12,8 @@
                 class="mt-32 absolute h-full min-w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-2/4 object-cover opacity-70"
                 src="../assets/img/banner.png" alt="hero section banner image">
             <!-- LOGO BIG -->
-            <div ref="heroLogo" class="mt-32 mx-20 sm:mx-32 z-10">
-                <img class="" src="../assets/img/aboutus/logo-big.svg" alt="quillio logo">
+            <div ref="heroLogo" class="mt-32 w-full flex justify-center items-center z-10">
+                <img class="w-1/3" src="../assets/img/aboutus/logo-big.svg" alt="quillio logo">
             </div>
         </section>
 
@@ -22,46 +22,46 @@
 
             <!-- TITLE CONTAINER -->
             <div ref="aboutUsTitleContainer"
-                class="mb-20 mt-24 mx-10 sm:mx-20 flex flex-col gap-6 bg-gradient-2 bg-clip-text">
+                class="mb-20 mt-16 mx-10 sm:mx-20 flex flex-col gap-6 bg-gradient-2 bg-clip-text">
                 <!-- TITLE TOP -->
                 <h3 ref="aboutUsTitle1"
-                    class="text-center font-avenir font-medium text-3xl sm:text4xl md:text-5xl lg:text-6xl text-transparent">
+                    class="text-center font-avenir font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent">
                     We’re musicians.
                 </h3>
                 <!-- TITLE BOTTOM -->
                 <h5 ref="aboutUsTitle2"
-                    class="text-center font-avenir font-medium text-3xl sm:text4xl md:text-5xl lg:text-6xl text-transparent leading-[1.2]">
+                    class="text-center font-avenir font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent leading-[1.2]">
                     We’re
                     engineers. We’re scientists.</h5>
             </div>
 
-            <div ref="aboutUsTextContainer" class="mb-48 mx-10 sm:mx-20 flex flex-col gap-4 sm:gap-8 md:gap-10 lg:gap-14">
+            <div ref="aboutUsTextContainer" class="mb-32 mx-10 sm:mx-20 flex flex-col gap-4 sm:gap-5 md:gap-7 lg:gap-10">
                 <!-- mb-10 -->
                 <p ref="textElement"
-                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
+                    class="text-animation leading-6 font-avenir text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wider text-center text-gray/50">
                     We’re a diverse,
                     multicultural and
                     multilingual team.
                 </p>
                 <p ref="textElement"
-                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
+                    class="text-animation leading-6 font-avenir text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wider text-center text-gray/50">
                     Our backgrounds are
                     interdisciplinary, and so are the services we provide.
                 </p>
                 <p ref="textElement"
-                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
+                    class="text-animation leading-6 font-avenir text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wider text-center text-gray/50">
                     It goes
                     without saying
                     that we deliver quality services.
                 </p>
                 <p ref="textElement"
-                    class="text-animation leading-6 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50">
+                    class="text-animation leading-6 font-avenir text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wider text-center text-gray/50">
                     But we
                     set ourselves apart through clear accountability and
                     communication.
                 </p>
                 <p ref="textElement"
-                    class="text-animation leading-6 xl:mx-48 2xl:mx-60 font-poppins text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-center text-gray/50 ease duration-300">
+                    class="text-animation leading-6 xl:mx-48 2xl:mx-60 font-avenir text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wider text-center text-gray/50 ease duration-300">
                     Our track record speaks for ourselves when it comes to meeting tight deadlines and confidentiality
                     requirements for your most ambitious projects.
                 </p>
@@ -71,6 +71,8 @@
         <!-- CONTACT US SECTION -->
         <section ref="contactUsContainer" class="overflow-hidden">
             <div class="relative h-[1478px] bg-gradient-to-t from-black from-30% to-transparent to-100%">
+
+                <div class="w-full h-32 bg-gradient-to-b from-surface/secondary"></div>
 
                 <img ref="contactUsImg" class="absolute top-0 left-0 -z-10 h-[1478px] object-cover"
                     src="../assets/img/aboutus/people.jpeg" alt="image of people stadning in a room">
@@ -85,25 +87,25 @@
                         <!-- TITLE -->
                         <!-- ========================================================================================== -->
                         <h3 ref="contactUsTitle"
-                            class="text-4xl sm:text-5xl md:text-4xl lg:text-5xl mb-8 font-avenir font-medium leading-[1.4] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.4] 2xl:leading-[1.4] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent ease duration-300">
+                            class="text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-8 font-avenir font-medium leading-[1.4] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.4] 2xl:leading-[1.4] bg-[size:200%] bg-gradient-2 bg-clip-text text-transparent ease duration-300">
                             We believe the best clients are those you form deep relationships with.
                         </h3>
                         <!-- ========================================================================================== -->
                         <!-- LINE -->
                         <!-- ========================================================================================== -->
-                        <div ref="contactUsLine" class="mb-16 xl:mb-20 h-1.5 w-64 bg-primary/400 rounded-full"></div>
+                        <div ref="contactUsLine" class="mb-16 xl:mb-20 h-1 w-64 bg-primary/400 rounded-full"></div>
                         <!-- ========================================================================================== -->
                         <!-- ABOUT -->
                         <!-- ========================================================================================== -->
                         <div>
                             <p ref="contactUsAbout1"
-                                class="mb-10 font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                                class="mb-10 font-poppins text-sm sm:text-lg md:text-base xl:text-lg tracking-wide font-light leading-9 text-gray/50">
                                 We
                                 aim to please. We go above and beyond to ensure that you gain enough value to keep coming
                                 back
                             </p>
                             <p ref="contactUsAbout2"
-                                class="font-poppins text-lg sm:text-xl md:text-xl xl:text-2xl tracking-wide font-light leading-9 text-gray/50">
+                                class="font-poppins text-sm sm:text-lg md:text-base xl:text-lg tracking-wide font-light leading-9 text-gray/50">
                                 Intrigued
                                 enough? Let’s have a conversation about your next big idea.</p>
                         </div>
@@ -215,7 +217,7 @@ onMounted(() => {
     });
 
     animations.from(aboutUsTitleContainer.value, {
-        gap: '10px',
+        gap: '24px',
         scrollTrigger: {
             trigger: aboutUsContainer.value,
             start: 'top center',
